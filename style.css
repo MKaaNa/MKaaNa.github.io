@@ -46,7 +46,7 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  background: linear-gradient(135deg, #0a0f0a 0%, #1f2937 50%, #047857 100%);
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
@@ -176,9 +176,10 @@ body {
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, 
-    var(--bg-primary) 0%, 
-    var(--bg-secondary) 50%, 
-    var(--bg-tertiary) 100%);
+    #0a0f0a 0%, 
+    #1f2937 30%, 
+    #047857 60%,
+    #374151 100%);
 }
 
 .floating-shapes {
@@ -425,7 +426,7 @@ section {
 
 /* About Section */
 .about {
-  background: var(--bg-secondary);
+  background: linear-gradient(135deg, #1f2937 0%, #047857 50%, #374151 100%);
 }
 
 .about-content {
@@ -585,7 +586,7 @@ section {
 
 /* Projects Section */
 .projects {
-  background: var(--bg-primary);
+  background: linear-gradient(135deg, #0a0f0a 0%, #064e3b 50%, #1f2937 100%);
 }
 
 .projects-grid {
@@ -750,7 +751,7 @@ section {
 
 /* Contact Section */
 .contact {
-  background: var(--bg-secondary);
+  background: linear-gradient(135deg, #1f2937 0%, #047857 50%, #064e3b 100%);
 }
 
 .contact-content {
