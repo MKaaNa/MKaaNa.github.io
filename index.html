@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hoş Geldiniz!</title>
-  </head>
-  <body>
-    <h1>Merhaba, ben Mkaana!</h1>
-    <p>Bu, GitHub Pages ile hazırladığım kişisel web sitem.</p>
-  </body>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Musa Kaan Altın | Portföy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#giris">GİRİŞ</a></li>
+        <li><a href="#hakkimda">HAKKIMDA</a></li>
+        <li><a href="#projeler">PROJELERİM</a></li>
+        <li><a href="#iletisim">İLETİŞİM</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="giris" class="hero">
+    <h1>Musa Kaan Altın</h1>
+    <p>Yazılım geliştirici, sistem tasarımcısı ve teknoloji tutkunu.</p>
+    <a href="#hakkimda" class="btn">Daha Fazlası</a>
+  </section>
+
+  <section id="hakkimda" class="about">
+    <img src="assets/images/senin-fotografin.jpg" alt="Musa Kaan">
+    <div>
+      <h2>Hakkımda</h2>
+      <p>Bilgisayar mühendisiyim. Java, Spring Boot, Angular, Flutter gibi teknolojilerle projeler geliştirdim. Özellikle backend, full-stack ve mobil alanlarında kendimi geliştirmeye devam ediyorum.</p>
+    </div>
+  </section>
+
+  <section id="projeler" class="projects">
+    <h2>Projelerim</h2>
+    <div class="project-card">
+      <h3>Hotel Reservation System</h3>
+      <p>Spring Boot ve Angular ile geliştirilmiş rezervasyon sistemi. JWT, Stripe entegrasyonu, PDF çıktısı.</p>
+    </div>
+    <div class="project-card">
+      <h3>Flutter Puzzle Game</h3>
+      <p>Firebase destekli, power-up özellikli mobil oyun.</p>
+    </div>
+    <div class="project-card">
+      <h3>Banking Web App</h3>
+      <p>JWT auth, PostgreSQL ve Express.js ile güvenli finans platformu.</p>
+    </div>
+  </section>
+
+  <section id="iletisim" class="contact">
+    <h2>Benimle İletişime Geç</h2>
+    <p>İş teklifleri, projeler ya da selam göndermek için aşağıdan yazabilirsin.</p>
+    <form action="mailto:mkaanaltin@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="isim" placeholder="İsim" required>
+      <input type="email" name="email" placeholder="E-posta" required>
+      <textarea name="mesaj" placeholder="Mesaj" required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+  </section>
+
+</body>
 </html>
