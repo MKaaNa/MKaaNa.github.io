@@ -220,13 +220,7 @@ class PortfolioAnalytics {
     const todayStats = this.analytics.dailyStats[today] || { visitors: 0, pageViews: 0 };
     const monthStats = this.analytics.monthlyStats[month] || { visitors: 0, pageViews: 0 };
     
-    // Update visitor counter in footer
-    const counterElement = document.getElementById('visitor-counter');
-    if (counterElement) {
-      counterElement.textContent = `${this.analytics.totalVisitors} ziyaretçi`;
-    }
-
-    // Update stats if elements exist
+    // Update admin panel stats if elements exist
     this.updateElementText('daily-visitors', todayStats.visitors);
     this.updateElementText('monthly-visitors', monthStats.visitors);
     this.updateElementText('total-visitors', this.analytics.totalVisitors);

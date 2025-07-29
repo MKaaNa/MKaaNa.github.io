@@ -420,13 +420,6 @@
       <div class="footer-content">
         <div class="footer-text">
           <p>&copy; 2024 Musa Kaan Altın. Tüm hakları saklıdır.</p>
-          <!-- Visitor counter display -->
-          <div class="visitor-stats">
-            <span class="visitor-count">
-              <i class="fas fa-eye"></i>
-              <span id="visitor-counter">Ziyaretçi sayısı yükleniyor...</span>
-            </span>
-          </div>
         </div>
         <div class="footer-social">
           <a href="#" class="social-link">
@@ -445,6 +438,50 @@
       </div>
     </div>
   </footer>
+
+  <!-- Hidden Admin Panel (Ctrl+Shift+A to toggle) -->
+  <div id="admin-panel" class="admin-panel hidden">
+    <div class="admin-content">
+      <div class="admin-header">
+        <h3><i class="fas fa-chart-line"></i> Site İstatistikleri</h3>
+        <button id="close-admin" class="close-btn">&times;</button>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-info">
+            <span class="stat-number" id="total-visitors">0</span>
+            <span class="stat-label">Toplam Ziyaretçi</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-eye"></i></div>
+          <div class="stat-info">
+            <span class="stat-number" id="total-pageviews">0</span>
+            <span class="stat-label">Sayfa Görüntüleme</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-calendar-day"></i></div>
+          <div class="stat-info">
+            <span class="stat-number" id="daily-visitors">0</span>
+            <span class="stat-label">Bugün</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+          <div class="stat-info">
+            <span class="stat-number" id="monthly-visitors">0</span>
+            <span class="stat-label">Bu Ay</span>
+          </div>
+        </div>
+      </div>
+      <div class="device-stats">
+        <h4>Cihaz Dağılımı</h4>
+        <div id="device-breakdown"></div>
+      </div>
+    </div>
+  </div>
 
   <script>
     // Smooth scrolling for navigation links
@@ -504,6 +541,77 @@
         typingText.textContent = text.slice(0, index + 1);
         index++;
         setTimeout(typeWriter, 100);
+      }
+    }
+    
+    // Admin Panel Controls
+    const adminPanel = document.getElementById('admin-panel');
+    const closeAdmin = document.getElementById('close-admin');
+    
+    // Keyboard shortcut to open admin panel (Ctrl+Shift+A)
+    document.addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+        e.preventDefault();
+        toggleAdminPanel();
+      }
+      // Also allow Escape to close
+      if (e.key === 'Escape' && adminPanel.classList.contains('show')) {
+        closeAdminPanel();
+      }
+    });
+    
+    // Close button functionality
+    closeAdmin.addEventListener('click', closeAdminPanel);
+    
+    // Close when clicking outside
+    adminPanel.addEventListener('click', (e) => {
+      if (e.target === adminPanel) {
+        closeAdminPanel();
+      }
+    });
+    
+    function toggleAdminPanel() {
+      if (adminPanel.classList.contains('show')) {
+        closeAdminPanel();
+      } else {
+        openAdminPanel();
+      }
+    }
+    
+    function openAdminPanel() {
+      adminPanel.classList.remove('hidden');
+      setTimeout(() => {
+        adminPanel.classList.add('show');
+      }, 10);
+      
+      // Update stats when panel is opened
+      updateAdminStats();
+    }
+    
+    function closeAdminPanel() {
+      adminPanel.classList.remove('show');
+      setTimeout(() => {
+        adminPanel.classList.add('hidden');
+      }, 300);
+    }
+    
+    function updateAdminStats() {
+      if (window.portfolioAnalytics) {
+        const stats = window.portfolioAnalytics.getStats();
+        
+        // Update device breakdown
+        const deviceBreakdown = document.getElementById('device-breakdown');
+        deviceBreakdown.innerHTML = '';
+        
+        Object.entries(stats.devices).forEach(([device, count]) => {
+          const deviceItem = document.createElement('div');
+          deviceItem.className = 'device-item';
+          deviceItem.innerHTML = `
+            <span class="device-name">${device}</span>
+            <span class="device-count">${count}</span>
+          `;
+          deviceBreakdown.appendChild(deviceItem);
+        });
       }
     }
     
