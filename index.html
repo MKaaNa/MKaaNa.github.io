@@ -3,62 +3,512 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Musa Kaan Altın | Portföy</title>
+  <title>Musa Kaan Altın | Software Developer</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Counter.dev Analytics -->
+  <script src="https://cdn.counter.dev/script.js"
+          data-id="35f3b64e-642b-4aa3-8c64-8a2ab6d9e41f"
+          data-utcoffset="3"></script>
+  
+  <!-- Advanced Portfolio Analytics -->
+  <script src="visitor-analytics.js"></script>
 </head>
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#giris">GİRİŞ</a></li>
-        <li><a href="#hakkimda">HAKKIMDA</a></li>
-        <li><a href="#projeler">PROJELERİM</a></li>
-        <li><a href="#iletisim">İLETİŞİM</a></li>
-      </ul>
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text">MK</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#giris" class="nav-link">Ana Sayfa</a></li>
+          <li><a href="#hakkimda" class="nav-link">Hakkımda</a></li>
+          <li><a href="#projeler" class="nav-link">Projeler</a></li>
+          <li><a href="#iletisim" class="nav-link">İletişim</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <section id="giris" class="hero">
-    <h1>Musa Kaan Altın</h1>
-    <p>Yazılım geliştirici, sistem tasarımcısı ve teknoloji tutkunu.</p>
-    <a href="#hakkimda" class="btn">Daha Fazlası</a>
-  </section>
+  <main>
+    <section id="giris" class="hero">
+      <div class="hero-background">
+        <div class="floating-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+          <div class="shape shape-4"></div>
+        </div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="greeting">Merhaba, Ben</span>
+            <span class="name">Musa Kaan Altın</span>
+          </h1>
+          <p class="hero-subtitle">
+            <span class="typing-text">Software Developer & System Designer</span>
+          </p>
+          <p class="hero-description">
+            Modern teknolojilerle kullanıcı deneyimini odak alan, ölçeklenebilir yazılım çözümleri geliştiriyorum.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projeler" class="btn btn-primary">
+              <i class="fas fa-code"></i>
+              Projelerimi Gör
+            </a>
+            <a href="#iletisim" class="btn btn-outline">
+              <i class="fas fa-envelope"></i>
+              Benimle İletişime Geç
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-link" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-link" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="mailto:mkaanaltin@gmail.com" class="social-link" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </section>
 
-  <section id="hakkimda" class="about">
-    <img src="assets/images/senin-fotografin.jpg" alt="Musa Kaan">
-    <div>
-      <h2>Hakkımda</h2>
-      <p>Bilgisayar mühendisiyim. Java, Spring Boot, Angular, Flutter gibi teknolojilerle projeler geliştirdim. Özellikle backend, full-stack ve mobil alanlarında kendimi geliştirmeye devam ediyorum.</p>
-    </div>
-  </section>
+    <section id="hakkimda" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Hakkımda</h2>
+          <p class="section-subtitle">Tutkulu bir yazılım geliştiricisi olarak hikayem</p>
+        </div>
+        <div class="about-content">
+          <div class="about-image">
+            <div class="image-container">
+              <img src="assets/images/senin-fotografin.jpg" alt="Musa Kaan Altın" class="profile-image">
+              <div class="image-overlay"></div>
+            </div>
+          </div>
+          <div class="about-text">
+            <div class="about-intro">
+              <h3>Yazılım Geliştirici & Sistem Tasarımcısı</h3>
+              <p>
+                Bilgisayar mühendisi olarak, modern teknolojilerle kullanıcı odaklı çözümler geliştirme konusunda tutkulum var. 
+                Backend sistemlerden mobil uygulamalara kadar geniş bir yelpazede projeler geliştirdim.
+              </p>
+            </div>
+            
+            <div class="skills-section">
+              <h4>Teknoloji Yığınım</h4>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <i class="fab fa-java"></i>
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">Java & Spring Boot</span>
+                    <span class="skill-level">Expert</span>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <i class="fab fa-angular"></i>
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">Angular</span>
+                    <span class="skill-level">Advanced</span>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <i class="fab fa-js-square"></i>
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">JavaScript/Node.js</span>
+                    <span class="skill-level">Advanced</span>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">Flutter</span>
+                    <span class="skill-level">Intermediate</span>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">PostgreSQL</span>
+                    <span class="skill-level">Advanced</span>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <i class="fab fa-aws"></i>
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">Cloud Services</span>
+                    <span class="skill-level">Intermediate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-  <section id="projeler" class="projects">
-    <h2>Projelerim</h2>
-    <div class="project-card">
-      <h3>Hotel Reservation System</h3>
-      <p>Spring Boot ve Angular ile geliştirilmiş rezervasyon sistemi. JWT, Stripe entegrasyonu, PDF çıktısı.</p>
-    </div>
-    <div class="project-card">
-      <h3>Flutter Puzzle Game</h3>
-      <p>Firebase destekli, power-up özellikli mobil oyun.</p>
-    </div>
-    <div class="project-card">
-      <h3>Banking Web App</h3>
-      <p>JWT auth, PostgreSQL ve Express.js ile güvenli finans platformu.</p>
-    </div>
-  </section>
+            <div class="stats-section">
+              <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Tamamlanan Proje</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Yıl Deneyim</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Teknoloji</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="iletisim" class="contact">
-    <h2>Benimle İletişime Geç</h2>
-    <p>İş teklifleri, projeler ya da selam göndermek için aşağıdan yazabilirsin.</p>
-    <form action="mailto:mkaanaltin@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="isim" placeholder="İsim" required>
-      <input type="email" name="email" placeholder="E-posta" required>
-      <textarea name="mesaj" placeholder="Mesaj" required></textarea>
-      <button type="submit">Gönder</button>
-    </form>
-  </section>
+    <section id="projeler" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projelerim</h2>
+          <p class="section-subtitle">Son zamanlarda üzerinde çalıştığım öne çıkan projeler</p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card featured">
+            <div class="project-image">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" title="Canlı Demo">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Hotel Reservation System</h3>
+                <span class="project-status featured-badge">Öne Çıkan</span>
+              </div>
+              <p class="project-description">
+                Spring Boot ve Angular ile geliştirilmiş kapsamlı rezervasyon sistemi. 
+                JWT authentication, Stripe ödeme entegrasyonu ve PDF raporlama özellikleri.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">Angular</span>
+                <span class="tech-tag">JWT</span>
+                <span class="tech-tag">Stripe</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+              <div class="project-features">
+                <div class="feature">
+                  <i class="fas fa-check"></i>
+                  Gerçek zamanlı rezervasyon
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check"></i>
+                  Güvenli ödeme sistemi
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check"></i>
+                  PDF rapor oluşturma
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" title="Canlı Demo">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Flutter Puzzle Game</h3>
+                <span class="project-status">Mobil</span>
+              </div>
+              <p class="project-description">
+                Firebase destekli, power-up özellikli eğlenceli mobil puzzle oyunu. 
+                Kullanıcı skorları ve sosyal özellikler.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Dart</span>
+              </div>
+              <div class="project-features">
+                <div class="feature">
+                  <i class="fas fa-check"></i>
+                  Cross-platform
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check"></i>
+                  Gerçek zamanlı skor
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" title="Canlı Demo">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Banking Web App</h3>
+                <span class="project-status">Web App</span>
+              </div>
+              <p class="project-description">
+                JWT authentication ve PostgreSQL ile güvenli finans yönetim platformu. 
+                Express.js backend ile RESTful API.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">JWT</span>
+              </div>
+              <div class="project-features">
+                <div class="feature">
+                  <i class="fas fa-check"></i>
+                  Güvenli authentication
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check"></i>
+                  RESTful API
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="more-projects">
+          <a href="#" class="btn btn-outline">
+            <i class="fab fa-github"></i>
+            Daha Fazla Proje
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="iletisim" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">İletişime Geçelim</h2>
+          <p class="section-subtitle">Yeni fırsatları konuşmak için buradayım</p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-text">
+              <h3>Birlikte çalışalım!</h3>
+              <p>
+                Yeni projeler, iş fırsatları veya teknoloji hakkında sohbet etmek istiyorsanız, 
+                benimle iletişime geçmekten çekinmeyin.
+              </p>
+            </div>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">mkaanaltin@gmail.com</span>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">Lokasyon</span>
+                  <span class="contact-value">Türkiye</span>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="contact-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">Müsaitlik</span>
+                  <span class="contact-value">Yeni projelere açık</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form action="mailto:mkaanaltin@gmail.com" method="POST" enctype="text/plain">
+              <div class="form-group">
+                <label for="name">İsim</label>
+                <input type="text" id="name" name="isim" placeholder="Adınız" required>
+              </div>
+              <div class="form-group">
+                <label for="email">E-posta</label>
+                <input type="email" id="email" name="email" placeholder="email@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Konu</label>
+                <input type="text" id="subject" name="konu" placeholder="Mesajınızın konusu">
+              </div>
+              <div class="form-group">
+                <label for="message">Mesaj</label>
+                <textarea id="message" name="mesaj" placeholder="Mesajınızı buraya yazın..." rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fas fa-paper-plane"></i>
+                Mesaj Gönder
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          <p>&copy; 2024 Musa Kaan Altın. Tüm hakları saklıdır.</p>
+          <!-- Visitor counter display -->
+          <div class="visitor-stats">
+            <span class="visitor-count">
+              <i class="fas fa-eye"></i>
+              <span id="visitor-counter">Ziyaretçi sayısı yükleniyor...</span>
+            </span>
+          </div>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="mailto:mkaanaltin@gmail.com" class="social-link">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    }));
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.project-card, .skill-item, .stat-item').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Typing animation
+    const typingText = document.querySelector('.typing-text');
+    const text = 'Software Developer & System Designer';
+    let index = 0;
+    
+    function typeWriter() {
+      if (index < text.length) {
+        typingText.textContent = text.slice(0, index + 1);
+        index++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+    
+    setTimeout(typeWriter, 1000);
+  </script>
 
 </body>
 </html>
