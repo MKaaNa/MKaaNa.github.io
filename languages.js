@@ -25,7 +25,8 @@ const languages = {
       title: "Junior Software Developer & Backend Developer",
       description: "Modern teknolojilerle kullanıcı deneyimini odak alan, ölçeklenebilir yazılım çözümleri geliştiriyorum.",
       viewProjects: "Projelerimi Gör",
-      contactMe: "Benimle İletişime Geç"
+      contactMe: "Benimle İletişime Geç",
+      downloadCV: "CV İndir"
     },
     
     // About Section
@@ -186,6 +187,7 @@ const languages = {
       subtitle: "Yeni fırsatları konuşmak için buradayım",
       heading: "Birlikte çalışalım!",
       description: "Yeni projeler, iş fırsatları veya teknoloji hakkında sohbet etmek istiyorsanız, benimle iletişime geçmekten çekinmeyin.",
+      downloadCV: "CV İndir",
       
       methods: {
         email: "Email",
@@ -270,7 +272,8 @@ const languages = {
       title: "Junior Software Developer & Backend Developer", 
       description: "I develop scalable software solutions focusing on user experience with modern technologies.",
       viewProjects: "View My Projects",
-      contactMe: "Get In Touch"
+      contactMe: "Get In Touch",
+      downloadCV: "Download CV"
     },
     
     // About Section
@@ -431,6 +434,7 @@ const languages = {
       subtitle: "I'm here to discuss new opportunities",
       heading: "Let's work together!",
       description: "If you want to chat about new projects, job opportunities or technology, don't hesitate to contact me.",
+      downloadCV: "Download CV",
       
       methods: {
         email: "Email",

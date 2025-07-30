@@ -13911,3 +13911,28 @@ body[data-theme="light"] .sector-experience h3 {
   .sector-cards { grid-template-columns: 1fr; }
 }
 
+
+/* CV Download Button Styles */
+.btn-secondary {
+  background: linear-gradient(135deg, var(--accent), #6366f1);
+  color: white;
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-xl), 0 0 25px rgba(139, 92, 246, 0.3);
+}
+
+.btn-small {
+  padding: 0.625rem 1rem;
+  font-size: 0.85rem;
+}
+
+.contact-actions {
+  margin-top: var(--spacing-lg);
+}
+
+.fa-file-pdf {
+  color: #dc2626;
+}
