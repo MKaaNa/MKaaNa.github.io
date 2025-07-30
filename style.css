@@ -481,7 +481,7 @@ section {
 
 .section-title {
   font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: var(--spacing-md);
   background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
   -webkit-background-clip: text;
@@ -693,7 +693,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -876,7 +876,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -910,13 +910,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -952,12 +952,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -1019,7 +1019,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -1072,7 +1072,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -1205,13 +1205,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -1241,7 +1241,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -1467,7 +1467,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -1650,7 +1650,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -1684,13 +1684,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -1726,12 +1726,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -1793,7 +1793,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -1846,7 +1846,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -1979,13 +1979,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -2015,7 +2015,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -2241,7 +2241,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -2424,7 +2424,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -2458,13 +2458,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -2500,12 +2500,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -2567,7 +2567,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -2620,7 +2620,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -2753,13 +2753,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -2789,7 +2789,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -3015,7 +3015,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -3198,7 +3198,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -3232,13 +3232,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -3274,12 +3274,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -3341,7 +3341,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -3394,7 +3394,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -3527,13 +3527,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -3563,7 +3563,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -3789,7 +3789,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -3972,7 +3972,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -4006,13 +4006,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -4048,12 +4048,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -4115,7 +4115,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -4168,7 +4168,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -4301,13 +4301,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -4337,7 +4337,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -4563,7 +4563,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -4746,7 +4746,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -4780,13 +4780,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -4822,12 +4822,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -4889,7 +4889,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -4942,7 +4942,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -5075,13 +5075,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -5111,7 +5111,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -5337,7 +5337,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -5520,7 +5520,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -5554,13 +5554,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -5596,12 +5596,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -5663,7 +5663,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -5716,7 +5716,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -5849,13 +5849,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -5885,7 +5885,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -6111,7 +6111,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -6294,7 +6294,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -6328,13 +6328,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -6370,12 +6370,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -6437,7 +6437,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -6490,7 +6490,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -6623,13 +6623,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -6659,7 +6659,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -6885,7 +6885,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -7068,7 +7068,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -7102,13 +7102,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -7144,12 +7144,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -7211,7 +7211,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -7264,7 +7264,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -7397,13 +7397,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -7433,7 +7433,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -7659,7 +7659,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -7842,7 +7842,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -7876,13 +7876,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -7918,12 +7918,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -7985,7 +7985,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -8038,7 +8038,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -8171,13 +8171,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -8207,7 +8207,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -8433,7 +8433,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -8616,7 +8616,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -8650,13 +8650,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -8692,12 +8692,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -8759,7 +8759,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -8812,7 +8812,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -8945,13 +8945,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -8981,7 +8981,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -9207,7 +9207,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -9390,7 +9390,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -9424,13 +9424,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -9466,12 +9466,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -9533,7 +9533,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -9586,7 +9586,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -9719,13 +9719,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -9755,7 +9755,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -9981,7 +9981,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -10164,7 +10164,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -10198,13 +10198,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -10240,12 +10240,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -10307,7 +10307,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -10360,7 +10360,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -10493,13 +10493,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -10529,7 +10529,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -10755,7 +10755,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -10938,7 +10938,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -10972,13 +10972,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -11014,12 +11014,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -11081,7 +11081,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -11134,7 +11134,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -11267,13 +11267,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -11303,7 +11303,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -11529,7 +11529,7 @@ section {
 }
 
 .skill-level {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
 }
 
@@ -11712,7 +11712,7 @@ section {
   background: var(--bg-glass);
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   text-decoration: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -11746,13 +11746,13 @@ section {
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
 .featured-badge {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
 }
 
 .project-description {
@@ -11788,12 +11788,12 @@ section {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .more-projects {
@@ -11855,7 +11855,7 @@ section {
 }
 
 .contact-label {
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   margin-bottom: var(--spacing-xs);
 }
@@ -11908,7 +11908,7 @@ section {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-muted);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Footer */
@@ -12041,13 +12041,13 @@ section {
 
 .stat-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: var(--text-muted);
   margin-top: var(--spacing-xs);
 }
@@ -12077,7 +12077,7 @@ section {
   padding: var(--spacing-sm);
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .device-name {
@@ -12208,7 +12208,7 @@ section {
 .blog-stat-label {
   color: var(--text-secondary);
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.55rem;
 }
 
 .articles-grid {
@@ -12263,7 +12263,7 @@ section {
   align-items: center;
   gap: var(--spacing-xs);
   background: rgba(0, 0, 0, 0.8);
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-md);
   font-size: 0.85rem;
@@ -12280,7 +12280,7 @@ section {
   color: var(--bg-primary);
   padding: var(--spacing-xs) var(--spacing-md);
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   font-weight: 600;
 }
 
@@ -12303,7 +12303,7 @@ section {
 .article-meta {
   display: flex;
   gap: var(--spacing-md);
-  font-size: 0.9rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   align-items: center;
 }
@@ -12331,7 +12331,7 @@ section {
   background: var(--bg-tertiary);
   color: var(--primary-color);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   font-weight: 500;
 }
 
@@ -12363,10 +12363,10 @@ section {
   left: var(--spacing-md);
   padding: var(--spacing-xs) var(--spacing-md);
   border-radius: var(--radius-md);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 0.45rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.2px;
   z-index: 10;
   animation: pulse 2s infinite;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -12374,13 +12374,13 @@ section {
 
 .popular-badge {
   background: linear-gradient(135deg, #ff6b6b, #ff8e53);
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .trending-badge {
   background: linear-gradient(135deg, #4ecdc4, #44a08d);
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -12395,9 +12395,9 @@ section {
   left: var(--spacing-md);
   padding: 6px 12px;
   border-radius: 20px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 0.55rem;
+  font-weight: 600;
+  text-transform: none;
   letter-spacing: 0.8px;
   z-index: 10;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -12408,13 +12408,13 @@ section {
 
 .popular-badge {
   background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .trending-badge {
   background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
-  color: white;
+  color: #1a1a1a; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.5rem; text-transform: none; letter-spacing: 0.2px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -12462,3 +12462,282 @@ section {
   opacity: 1;
 }
 
+
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 4px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.lang-btn.active {
+  background: var(--primary-color);
+  color: var(--bg-primary);
+  box-shadow: 0 2px 8px rgba(245, 245, 245, 0.3);
+}
+
+.lang-btn .flag {
+  font-size: 1rem;
+}
+
+.lang-btn .lang-text {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    order: -1;
+    margin-right: auto;
+    margin-left: var(--spacing-md);
+  }
+  
+  .lang-btn {
+    padding: 4px 6px;
+    font-size: 0.5rem;
+  }
+  
+  .lang-btn .flag {
+    font-size: 0.55rem;
+  }
+}
+
+
+/* Simple Language Switcher */
+.language-switcher {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-btn {
+  background: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+  opacity: 1;
+  border-color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    order: -1;
+    margin-right: auto;
+    margin-left: var(--spacing-md);
+  }
+}
+
+
+
+
+.open-to-work-badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.open-to-work-badge:hover::before {
+  left: 100%;
+}
+
+
+
+@media (max-width: 480px) {
+  .open-to-work-badge {
+    display: block;
+    margin: 0.5rem 0 0 0;
+    text-align: center;
+    font-size: 0.45rem;
+    padding: 0.15rem 0.4rem;
+  }
+}
+
+
+
+.open-to-work-badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.open-to-work-badge:hover::before {
+  left: 100%;
+}
+
+
+
+@media (max-width: 480px) {
+  .open-to-work-badge {
+    display: block;
+    margin: 0.3rem 0 0 0;
+    text-align: center;
+    font-size: 0.3rem;
+    padding: 0.06rem 0.2rem;
+  }
+}
+
+
+
+  display: inline-block;
+  background: #22c55e;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+  left: 100%;
+}
+
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.5);
+}
+
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15), 0 0 20px rgba(34, 197, 94, 0.8);
+  }
+}
+
+/* Responsive design for work button */
+@media (max-width: 768px) {
+    margin-left: 0.5rem;
+  }
+  
+    font-size: 0.6rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+    margin-left: 0.3rem;
+  }
+  
+    font-size: 0.5rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+
+/* Looking for Work Button - Modern Style */
+.looking-for-work {
+  margin-left: 0.5rem;
+}
+
+.work-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #22c55e;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: pulse-glow 2s infinite;
+}
+
+.work-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(34, 197, 94, 0.6);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .looking-for-work {
+    margin-left: 0.5rem;
+  }
+  
+  .work-btn {
+    font-size: 0.65rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .looking-for-work {
+    margin-left: 0.3rem;
+  }
+  
+  .work-btn {
+    font-size: 0.6rem;
+    padding: 0.35rem 0.7rem;
+  }
+}
