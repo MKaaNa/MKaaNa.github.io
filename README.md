@@ -1,46 +1,27 @@
-# 🌟 Kişisel Portfolyo Websitesi
+# 💼 Musa Kaan Altın - Portfolio
 
-Modern ve duyarlı tasarım ile hazırlanmış kişisel portfolyo websitesi.
+Modern ve responsive kişisel portfolio websitesi.
 
 ## 🚀 Özellikler
 
-- ✨ Modern ve temiz tasarım
-- 📱 Mobil uyumlu (Responsive)
-- 🎯 İnteraktif animasyonlar
-- 📊 Blog yazıları entegrasyonu
-- 📧 Çalışan iletişim formu (Formspree)
-- 🔒 Özel admin paneli (Ctrl + Shift + A)
+- Responsive tasarım
+- Dark/Light mod
+- Çoklu dil desteği (TR/EN)
+- İletişim formu
+- Blog entegrasyonu
+- Kariyerim bölümü
 
-## ⚙️ Kurulum
+## 🛠️ Teknolojiler
 
-### Formspree İletişim Formu Kurulumu:
+- HTML5, CSS3, JavaScript
+- Font Awesome Icons
+- Google Fonts
+- Formspree (İletişim formu)
 
-✅ **KURULUM TAMAMLANDI!** Form zaten aktif.
+## 📱 Demo
 
-Eğer form ID'nizi değiştirmek isterseniz:
-
-1. [formspree.io](https://formspree.io) adresine gidin
-2. Ücretsiz hesap oluşturun
-3. Yeni bir form oluşturun
-4. Form ID'nizi alın (örnek: `xpzgkqba`)
-5. `index.html` dosyasında şu satırı bulun:
-   ```html
-   <form action="https://formspree.io/f/mrblkwry" method="POST" id="contact-form">
-   ```
-6. `mrblkwry` kısmını kendi Form ID'niz ile değiştirin:
-   ```html
-   <form action="https://formspree.io/f/YENİ_FORM_ID" method="POST" id="contact-form">
-   ```
-
-### Deployment:
-
-1. GitHub Pages ile deploy edin
-2. Veya herhangi bir static hosting servisinde yayınlayın
+[Canlı Demo](https://mkaana.github.io)
 
 ## 📧 İletişim
 
-Form çalıştıktan sonra, ziyaretçiler size doğrudan e-posta gönderebilecek!
-
----
-
-💻 **Musa Kaan Altın** tarafından geliştirilmiştir.
+Email: mkaanaltin@gmail.com
