@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Musa Kaan Altın | Computer Engineer</title>
-  <link rel="stylesheet" href="style.css?v=20241218-v3" />
+  <link rel="stylesheet" href="style.css?v=20241218-scroll-fix" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -23,6 +23,17 @@
 </head>
 <body>
 
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">MK</div>
+      <div class="loading-text">Yükleniyor...</div>
+      <div class="loading-spinner">
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </div>
+
   <header class="header">
     <nav class="navbar">
       <div class="nav-container">
@@ -37,6 +48,13 @@
           <li><a href="#projeler" class="nav-link" data-lang="nav.projects">Projeler</a></li>
           <li><a href="#iletisim" class="nav-link" data-lang="nav.contact">İletişim</a></li>
       </ul>
+        
+        <!-- Theme Toggle -->
+        <div class="theme-toggle">
+          <button class="theme-btn" id="theme-toggle" title="Tema Değiştir">
+            <i class="fas fa-moon" id="theme-icon"></i>
+          </button>
+        </div>
         
         <!-- Looking for Work Button -->
         <div class="looking-for-work">
@@ -685,6 +703,11 @@
     </div>
   </div>
 
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="scroll-to-top" title="Yukarı Çık">
+    ↑
+  </button>
+
   <script>
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -934,6 +957,61 @@
     setTimeout(() => {
       updateContent(currentLang);
     }, 100);
+
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+    
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    body.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+    
+    function updateThemeIcon(theme) {
+      if (theme === 'dark') {
+        themeIcon.className = 'fas fa-sun';
+        themeToggle.title = 'Açık Temaya Geç';
+      } else {
+        themeIcon.className = 'fas fa-moon';
+        themeToggle.title = 'Koyu Temaya Geç';
+      }
+    }
+
+    // Loading Screen
+    window.addEventListener('load', () => {
+      const loadingScreen = document.getElementById('loading-screen');
+      loadingScreen.style.opacity = '0';
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+      }, 500);
+    });
+
+    // Scroll to top button functionality
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+    window.addEventListener('scroll', () => {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = 'flex';
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.style.display = 'none';
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    });
   </script>
 
 </body>

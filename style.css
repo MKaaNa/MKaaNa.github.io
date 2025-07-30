@@ -12741,3 +12741,420 @@ section {
     padding: 0.35rem 0.7rem;
   }
 }
+
+
+/* Theme Toggle Button */
+.theme-toggle {
+  margin-left: 1rem;
+}
+
+.theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.theme-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.theme-btn i {
+  font-size: 1rem;
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --primary-color: #22c55e;
+  --primary-light: #4ade80;
+}
+
+[data-theme="light"] body {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+[data-theme="light"] .hero-background {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+[data-theme="light"] .about {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+[data-theme="light"] .projects {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+[data-theme="light"] .contact {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+/* Loading Screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.loading-content {
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.loading-logo {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.loading-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(34, 197, 94, 0.3);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(34, 197, 94, 0.4);
+}
+
+.scroll-to-top i {
+  font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .theme-toggle {
+    margin-left: 0.5rem;
+  }
+  
+  .theme-btn {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .scroll-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .loading-logo {
+    font-size: 2.5rem;
+  }
+  
+  .loading-text {
+    font-size: 1rem;
+  }
+}
+
+
+/* Disable textarea resize */
+textarea {
+  resize: none !important;
+  min-height: 120px;
+  max-height: 120px;
+  height: 120px;
+}
+
+.form-group textarea {
+  resize: none !important;
+  min-height: 120px;
+  max-height: 120px;
+  height: 120px;
+}
+
+#message {
+  resize: none !important;
+  min-height: 120px;
+  max-height: 120px;
+  height: 120px;
+}
+
+
+/* Light Theme - Complete Coverage */
+[data-theme="light"] .skills {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+[data-theme="light"] .blog {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+[data-theme="light"] .footer {
+  background: var(--bg-secondary);
+}
+
+[data-theme="light"] .header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+}
+
+[data-theme="light"] .nav-menu {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="light"] .card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .skill-item,
+[data-theme="light"] .article-card,
+[data-theme="light"] .stat-item {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .contact-form {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] input,
+[data-theme="light"] textarea {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .theme-btn {
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .theme-btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll to top button styling */
+.scroll-to-top {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+
+/* Fix scroll to top button visibility in dark mode */
+[data-theme="dark"] .scroll-to-top {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
+}
+
+[data-theme="dark"] .scroll-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(34, 197, 94, 0.4);
+}
+
+[data-theme="light"] .scroll-to-top {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
+}
+
+[data-theme="light"] .scroll-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(34, 197, 94, 0.4);
+}
+
+
+/* Improve text readability in project cards */
+.project-title {
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.project-description {
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1rem !important;
+}
+
+.tech-tag {
+  font-size: 0.8rem !important;
+  padding: 0.4rem 0.8rem !important;
+  margin: 0.2rem !important;
+}
+
+.feature {
+  font-size: 0.9rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.project-status {
+  font-size: 0.8rem !important;
+  padding: 0.4rem 0.8rem !important;
+  font-weight: 600 !important;
+}
+
+/* Improve article card text readability */
+.article-title {
+  font-size: 1.2rem !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.article-excerpt {
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1rem !important;
+}
+
+.tag {
+  font-size: 0.75rem !important;
+  padding: 0.3rem 0.6rem !important;
+}
+
+.article-publication {
+  font-size: 0.85rem !important;
+}
+
+/* Improve skill cards text */
+.skill-name {
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+}
+
+/* Improve stats text */
+.stat-number {
+  font-size: 1.8rem !important;
+  font-weight: 800 !important;
+}
+
+.stat-label {
+  font-size: 0.9rem !important;
+}
+
+/* Mobile improvements */
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 1.2rem !important;
+  }
+  
+  .project-description {
+    font-size: 0.9rem !important;
+  }
+  
+  .article-title {
+    font-size: 1.1rem !important;
+  }
+  
+  .article-excerpt {
+    font-size: 0.85rem !important;
+  }
+}
+
+
+/* Force scroll to top button visibility in dark mode */
+body[data-theme="dark"] .scroll-to-top {
+  background: #22c55e !important;
+  color: white !important;
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.5) !important;
+  border: 2px solid #22c55e !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 9999 !important;
+}
+
+body[data-theme="dark"] .scroll-to-top:hover {
+  background: #16a34a !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(34, 197, 94, 0.6) !important;
+}
+
+/* Also ensure it works without theme attribute */
+.scroll-to-top {
+  background: #22c55e !important;
+  color: white !important;
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.5) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 9999 !important;
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  line-height: 1 !important;
+  display: none !important;
+}
+
+.scroll-to-top.show {
+  display: flex !important;
+}

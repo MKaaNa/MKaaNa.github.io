@@ -12,7 +12,9 @@ const languages = {
     
     // Header
     header: {
-      lookingForWork: "🟢 İş Arıyorum"
+      lookingForWork: "🟢 İş Arıyorum",
+      darkTheme: "Koyu Temaya Geç", 
+      lightTheme: "Açık Temaya Geç"
     },
     
     // Hero Section
@@ -156,6 +158,18 @@ const languages = {
         thisMonth: "Bu Ay"
       },
       deviceStats: "Cihaz Dağılımı"
+    },
+
+    // Loading Screen
+    loading: {
+      title: "Yükleniyor...",
+      description: "Lütfen bekleyin, sayfa yükleniyor."
+    },
+
+    // Theme Toggle
+    themeToggle: {
+      dark: "Koyu Temaya Geç",
+      light: "Açık Temaya Geç"
     }
   },
   
@@ -172,7 +186,9 @@ const languages = {
     
     // Header
     header: {
-      lookingForWork: "🟢 Looking for Work"
+      lookingForWork: "🟢 Looking for Work",
+      darkTheme: "Dark Mode", 
+      lightTheme: "Light Mode"
     },
     
     // Hero Section
@@ -316,6 +332,18 @@ const languages = {
         thisMonth: "This Month"
       },
       deviceStats: "Device Distribution"
+    },
+
+    // Loading Screen
+    loading: {
+      title: "Loading...",
+      description: "Please wait, page is loading."
+    },
+
+    // Theme Toggle
+    themeToggle: {
+      dark: "Dark Mode",
+      light: "Light Mode"
     }
   }
 };
