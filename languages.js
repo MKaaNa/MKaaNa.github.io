@@ -4,6 +4,7 @@ const languages = {
     nav: {
       home: "Ana Sayfa",
       about: "Hakkımda", 
+      career: "Kariyerim",
       skills: "Yetenekler",
       blog: "Yazılar",
       projects: "Projeler",
@@ -44,6 +45,76 @@ const languages = {
       goal: {
         title: "Bir Sonraki Hedefim", 
         description: "Backend ve mobil teknolojileri entegre ederek kullanıcıya değer sunan projeler geliştirmek."
+      }
+    },
+    
+    // Career Section
+    career: {
+      title: "Kariyerim",
+      subtitle: "15 ay staj deneyimi ile 6 farklı şirkette kazandığım profesyonel tecrübelerim",
+      
+      stats: {
+        companies: "Farklı Şirket",
+        months: "Ay Deneyim",
+        sectors: "Farklı Sektör"
+      },
+      
+      ziraat1: {
+        company: "Ziraat Teknoloji",
+        date: "01/2025 – 06/2025",
+        position: "Full-Stack Developer Intern",
+        description: "Bu uzun dönem stajımda iki farklı projede görev aldım. Flutter ile mobil bulmaca oyunu ve Spring Boot & Angular ile otel rezervasyon sistemi geliştirdim. Her iki projede de full-stack yaklaşım benimseyerek yazılım yaşam döngüsünün tüm aşamalarına katkı sundum."
+      },
+      
+      ziraat2: {
+        company: "Ziraat Teknoloji", 
+        date: "07/2024 – 08/2024",
+        position: "Full-Stack Developer Intern",
+        description: "React ve Express.js teknolojilerini kullanarak güvenli bir bankacılık web uygulaması geliştirdim. JWT authentication ve RESTful API mimarisi ile güvenli kullanıcı deneyimi sağladım."
+      },
+      
+      stm: {
+        company: "STM",
+        date: "01/2024 – 02/2024", 
+        position: "Embedded Software Intern",
+        description: "Gerçek zamanlı gömülü sistemler üzerine çalıştım. Tiva C TM4C1294XL donanımında firmware optimizasyonu yaparak UART protokolleri ile veri analizi sistemleri geliştirdim."
+      },
+      
+      mobiliz: {
+        company: "Mobiliz",
+        date: "06/2023 – 07/2023",
+        position: "iOS Developer Intern", 
+        description: "Doğal afet görüntülerinin konum bazlı paylaşımına olanak tanıyan iOS uygulaması geliştirdim. Google Maps API ve Firebase entegrasyonu ile güvenli ve gerçek zamanlı veri yönetimi sağladım."
+      },
+      
+      crypttech: {
+        company: "Crypttech",
+        date: "01/2023 – 02/2023",
+        position: "Machine Learning & AI Engineer Intern",
+        description: "Makine öğrenmesi modelleri eğitme ve değerlendirme süreçlerinde çalıştım. Scikit-learn ve TensorFlow ile sınıflandırma ve tahmin modelleri oluşturarak veri bilimi tecrübesi kazandım."
+      },
+      
+      karel: {
+        company: "Karel",
+        date: "06/2022 – 08/2022",
+        position: "Embedded Software Intern",
+        description: "Çevresel veri toplama amaçlı gömülü sistem projesi geliştirdim. STM32 Nucleo kartı üzerinde çoklu sensör entegrasyonu yaparak gerçek zamanlı hava kalitesi analiz sistemi oluşturdum."
+      },
+      
+      sectors: {
+        title: "Sektör Deneyimlerim",
+        fintech: {
+          title: "Fintech & Banking",
+          description: "Güvenli bankacılık sistemleri ve ödeme altyapıları"
+        },
+        defense: {
+          title: "Defense & Security", 
+          description: "Kritik sistemler ve gerçek zamanlı uygulamalar"
+        },
+        iot: {
+          title: "IoT & Embedded",
+          description: "Gömülü sistemler ve sensör teknolojileri"
+        }
       }
     },
     
@@ -178,6 +249,7 @@ const languages = {
     nav: {
       home: "Home",
       about: "About",
+      career: "Career",
       skills: "Skills", 
       blog: "Blog",
       projects: "Projects",
@@ -218,6 +290,76 @@ const languages = {
       goal: {
         title: "My Next Goal",
         description: "To develop projects that provide value to users by integrating backend and mobile technologies."
+      }
+    },
+    
+    // Career Section
+    career: {
+      title: "My Career",
+      subtitle: "15 months of professional experience gained through 6 different companies",
+      
+      stats: {
+        companies: "Different Companies",
+        months: "Months Experience",
+        sectors: "Different Sectors"
+      },
+      
+      ziraat1: {
+        company: "Ziraat Technology",
+        date: "01/2025 – 06/2025",
+        position: "Full-Stack Developer Intern",
+        description: "During this long-term internship, I worked on two different projects. I developed a Flutter mobile puzzle game and a hotel reservation system with Spring Boot & Angular. In both projects, I adopted a full-stack approach, contributing to all stages of the software development lifecycle."
+      },
+      
+      ziraat2: {
+        company: "Ziraat Technology", 
+        date: "07/2024 – 08/2024",
+        position: "Full-Stack Developer Intern",
+        description: "I developed a secure banking web application using React and Express.js. I provided a secure user experience with JWT authentication and RESTful API architecture."
+      },
+      
+      stm: {
+        company: "STM",
+        date: "01/2024 – 02/2024", 
+        position: "Embedded Software Intern",
+        description: "I worked on real-time embedded systems. I developed data analysis systems using UART protocols on the Tiva C TM4C1294XL hardware by optimizing firmware."
+      },
+      
+      mobiliz: {
+        company: "Mobiliz",
+        date: "06/2023 – 07/2023",
+        position: "iOS Developer Intern", 
+        description: "I developed an iOS application that enables sharing of natural disaster images based on location. I provided secure and real-time data management with Google Maps API and Firebase integration."
+      },
+      
+      crypttech: {
+        company: "Crypttech",
+        date: "01/2023 – 02/2023",
+        position: "Machine Learning & AI Engineer Intern",
+        description: "I worked on training and evaluating machine learning models. I gained data science experience by creating classification and prediction models using Scikit-learn and TensorFlow."
+      },
+      
+      karel: {
+        company: "Karel",
+        date: "06/2022 – 08/2022",
+        position: "Embedded Software Intern",
+        description: "I developed an embedded system project for environmental data collection. I created a real-time air quality analysis system with multiple sensor integration on the STM32 Nucleo board."
+      },
+      
+      sectors: {
+        title: "My Industry Experience",
+        fintech: {
+          title: "Fintech & Banking",
+          description: "Secure banking systems and payment infrastructure"
+        },
+        defense: {
+          title: "Defense & Security", 
+          description: "Critical systems and real-time applications"
+        },
+        iot: {
+          title: "IoT & Embedded",
+          description: "Embedded systems and sensor technologies"
+        }
       }
     },
     
