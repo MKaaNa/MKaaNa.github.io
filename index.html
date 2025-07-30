@@ -3,10 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Musa Kaan Altın | Computer Engineer</title>
-  <link rel="stylesheet" href="style.css?v=20241218-scroll-fix" />
+  <title>Musa Kaan Altın | Junior Software Developer & Backend Developer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Musa Kaan Altın - Junior Software Developer ve Backend Developer. Spring Boot, React, Flutter, Node.js teknolojileri ile modern web ve mobil uygulamalar geliştiriyorum. İş fırsatları için iletişime geçin.">
+  <meta name="keywords" content="software developer, backend developer, junior developer, spring boot, react, flutter, nodejs, javascript, java, postgresql, yazılım geliştirici, web developer, mobile developer, musa kaan altın">
+  <meta name="author" content="Musa Kaan Altın">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Turkish">
+  
+  <!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
+  <meta property="og:title" content="Musa Kaan Altın | Junior Software Developer & Backend Developer">
+  <meta property="og:description" content="Junior Software Developer. Spring Boot, React, Flutter teknolojileri ile modern uygulamalar geliştiriyorum. Backend ve mobil development uzmanı.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mkaana.github.io">
+  <meta property="og:image" content="https://mkaana.github.io/assets/images/og-image.jpg">
+  <meta property="og:image:alt" content="Musa Kaan Altın - Software Developer Portfolio">
+  <meta property="og:site_name" content="Musa Kaan Altın Portfolio">
+  <meta property="og:locale" content="tr_TR">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Musa Kaan Altın | Junior Software Developer">
+  <meta name="twitter:description" content="Backend ve mobil development uzmanı. Spring Boot, React, Flutter ile modern uygulamalar geliştiriyorum.">
+  <meta name="twitter:image" content="https://mkaana.github.io/assets/images/og-image.jpg">
+  <meta name="twitter:creator" content="@mkaanaltin">
+  
+  <!-- Additional SEO Tags -->
+  <meta name="theme-color" content="#22c55e">
+  <meta name="msapplication-TileColor" content="#22c55e">
+  <link rel="canonical" href="https://mkaana.github.io">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/images/android-chrome-512x512.png">
+  <link rel="manifest" href="./site.webmanifest">
+  
+  <link rel="stylesheet" href="style.css?v=20241218-seo-complete" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+  <link rel="preload" href="style.css?v=20241218-seo-complete" as="style">
+  <link rel="preload" href="languages.js" as="script">
+  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
@@ -20,8 +63,50 @@
   
   <!-- Language Support -->
   <script src="languages.js"></script>
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Musa Kaan Altın",
+    "jobTitle": "Junior Software Developer",
+    "description": "Backend ve mobil uygulama geliştirme uzmanı",
+    "url": "https://mkaana.github.io",
+    "image": "https://mkaana.github.io/assets/images/Kaan.JPG",
+    "sameAs": [
+      "https://github.com/MKaaNa",
+      "https://linkedin.com/in/mkaana/",
+      "https://medium.com/@mkaanaltin"
+    ],
+    "email": "mkaanaltin@gmail.com",
+    "knowsAbout": [
+      "Java",
+      "Spring Boot",
+      "React",
+      "Flutter",
+      "Node.js",
+      "PostgreSQL",
+      "Backend Development",
+      "Mobile Development"
+    ],
+    "alumniOf": "Computer Engineering",
+    "workLocation": {
+      "@type": "Place",
+      "name": "Turkey"
+    },
+    "seeking": {
+      "@type": "JobPosting",
+      "title": "Software Developer Position",
+      "description": "Yeni mezun yazılım geliştirici olarak iş fırsatları arıyorum"
+    }
+  }
+  </script>
 </head>
 <body>
+
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Ana içeriğe geç</a>
 
   <!-- Loading Screen -->
   <div id="loading-screen" class="loading-screen">
@@ -35,41 +120,41 @@
   </div>
 
   <header class="header">
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Ana navigasyon">
       <div class="nav-container">
         <div class="nav-logo">
-          <span class="logo-text">MK</span>
+          <span class="logo-text" aria-label="Musa Kaan Altın logosu">MK</span>
         </div>
-        <ul class="nav-menu">
-          <li><a href="#giris" class="nav-link" data-lang="nav.home">Ana Sayfa</a></li>
-          <li><a href="#hakkimda" class="nav-link" data-lang="nav.about">Hakkımda</a></li>
-          <li><a href="#yetenekler" class="nav-link" data-lang="nav.skills">Yetenekler</a></li>
-          <li><a href="#yazilar" class="nav-link" data-lang="nav.blog">Yazılar</a></li>
-          <li><a href="#projeler" class="nav-link" data-lang="nav.projects">Projeler</a></li>
-          <li><a href="#iletisim" class="nav-link" data-lang="nav.contact">İletişim</a></li>
+        <ul class="nav-menu" role="menubar">
+          <li role="menuitem"><a href="#giris" class="nav-link" data-lang="nav.home" aria-label="Ana sayfa bölümüne git">Ana Sayfa</a></li>
+          <li role="menuitem"><a href="#hakkimda" class="nav-link" data-lang="nav.about" aria-label="Hakkımda bölümüne git">Hakkımda</a></li>
+          <li role="menuitem"><a href="#yetenekler" class="nav-link" data-lang="nav.skills" aria-label="Yetenekler bölümüne git">Yetenekler</a></li>
+          <li role="menuitem"><a href="#yazilar" class="nav-link" data-lang="nav.blog" aria-label="Blog yazıları bölümüne git">Yazılar</a></li>
+          <li role="menuitem"><a href="#projeler" class="nav-link" data-lang="nav.projects" aria-label="Projeler bölümüne git">Projeler</a></li>
+          <li role="menuitem"><a href="#iletisim" class="nav-link" data-lang="nav.contact" aria-label="İletişim bölümüne git">İletişim</a></li>
       </ul>
         
         <!-- Theme Toggle -->
         <div class="theme-toggle">
-          <button class="theme-btn" id="theme-toggle" title="Tema Değiştir">
-            <i class="fas fa-moon" id="theme-icon"></i>
+          <button class="theme-btn" id="theme-toggle" title="Tema Değiştir" aria-label="Koyu/açık tema değiştir">
+            <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
           </button>
         </div>
         
         <!-- Looking for Work Button -->
         <div class="looking-for-work">
-          <a href="mailto:mkaanaltin@gmail.com?subject=İş Fırsatı&body=Merhaba Kaan,%0D%0A%0D%0Aİş fırsatı hakkında görüşmek istiyorum.%0D%0A%0D%0Aİletişim bilgilerim:%0D%0A%0D%0A" class="work-btn" data-lang="header.lookingForWork">
+          <a href="mailto:mkaanaltin@gmail.com?subject=İş Fırsatı&body=Merhaba Kaan,%0D%0A%0D%0Aİş fırsatı hakkında görüşmek istiyorum.%0D%0A%0D%0Aİletişim bilgilerim:%0D%0A%0D%0A" class="work-btn" data-lang="header.lookingForWork" aria-label="İş fırsatları için e-posta gönder">
             🟢 İş Arıyorum
           </a>
         </div>
         
         <!-- Language Switcher -->
-        <div class="language-switcher">
-          <button class="lang-btn active" data-lang-switch="tr">🇹🇷</button>
-          <button class="lang-btn" data-lang-switch="en">🇺🇸</button>
+        <div class="language-switcher" role="group" aria-label="Dil seçenekleri">
+          <button class="lang-btn active" data-lang-switch="tr" aria-label="Türkçe dil seçeneği" aria-pressed="true">🇹🇷</button>
+          <button class="lang-btn" data-lang-switch="en" aria-label="İngilizce dil seçeneği" aria-pressed="false">🇺🇸</button>
         </div>
         
-        <div class="hamburger">
+        <div class="hamburger" aria-label="Mobil menü aç/kapat" role="button" tabindex="0">
           <span></span>
           <span></span>
           <span></span>
@@ -78,7 +163,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
   <section id="giris" class="hero">
       <div class="hero-background">
         <div class="floating-shapes">
@@ -142,7 +227,7 @@
         <div class="about-content">
           <div class="about-image">
             <div class="image-container">
-              <img src="assets/images/Kaan.JPG" alt="Musa Kaan Altın" class="profile-image">
+              <img src="assets/images/Kaan.JPG" alt="Musa Kaan Altın - Junior Software Developer ve Backend Developer profil fotoğrafı" class="profile-image" loading="lazy">
               <div class="image-overlay"></div>
             </div>
           </div>
@@ -606,28 +691,32 @@
             </div>
           </div>
           <div class="contact-form">
-            <form action="https://formspree.io/f/mrblkwry" method="POST" id="contact-form">
+            <form action="https://formspree.io/f/mrblkwry" method="POST" id="contact-form" role="form" aria-label="İletişim formu">
               <div class="form-group">
                 <label for="name" data-lang="contact.form.name">İsim</label>
-                <input type="text" id="name" name="name" data-lang-placeholder="contact.form.namePlaceholder" placeholder="Adınız" required>
+                <input type="text" id="name" name="name" data-lang-placeholder="contact.form.namePlaceholder" placeholder="Adınız" required aria-required="true" aria-describedby="name-help">
+                <div id="name-help" class="sr-only">Tam adınızı giriniz</div>
               </div>
               <div class="form-group">
                 <label for="email" data-lang="contact.form.email">E-posta</label>
-                <input type="email" id="email" name="email" data-lang-placeholder="contact.form.emailPlaceholder" placeholder="email@example.com" required>
+                <input type="email" id="email" name="email" data-lang-placeholder="contact.form.emailPlaceholder" placeholder="email@example.com" required aria-required="true" aria-describedby="email-help">
+                <div id="email-help" class="sr-only">Geçerli bir e-posta adresi giriniz</div>
               </div>
               <div class="form-group">
                 <label for="subject" data-lang="contact.form.subject">Konu</label>
-                <input type="text" id="subject" name="subject" data-lang-placeholder="contact.form.subjectPlaceholder" placeholder="Mesajınızın konusu">
+                <input type="text" id="subject" name="subject" data-lang-placeholder="contact.form.subjectPlaceholder" placeholder="Mesajınızın konusu" aria-describedby="subject-help">
+                <div id="subject-help" class="sr-only">Mesajınızın konusunu kısaca belirtiniz</div>
               </div>
               <div class="form-group">
                 <label for="message" data-lang="contact.form.message">Mesaj</label>
-                <textarea id="message" name="message" data-lang-placeholder="contact.form.messagePlaceholder" placeholder="Mesajınızı buraya yazın..." rows="5" required></textarea>
+                <textarea id="message" name="message" data-lang-placeholder="contact.form.messagePlaceholder" placeholder="Mesajınızı buraya yazın..." rows="5" required aria-required="true" aria-describedby="message-help"></textarea>
+                <div id="message-help" class="sr-only">Detaylı mesajınızı buraya yazabilirsiniz</div>
               </div>
-              <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
-                <i class="fas fa-paper-plane"></i>
+              <button type="submit" class="btn btn-primary btn-full" id="submit-btn" aria-describedby="form-status">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
                 <span class="btn-text" data-lang="contact.form.submit">Mesaj Gönder</span>
               </button>
-              <div id="form-status" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px;"></div>
+              <div id="form-status" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px;" role="alert" aria-live="polite"></div>
     </form>
           </div>
         </div>
