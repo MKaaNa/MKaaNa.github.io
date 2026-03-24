@@ -13,7 +13,7 @@ const languages = {
     
     // Header
     header: {
-      lookingForWork: "Yeni fırsatlara açığım",
+      lookingForWork: "Fırsatlara Açığım",
       darkTheme: "Koyu Temaya Geç", 
       lightTheme: "Açık Temaya Geç"
     },
@@ -221,7 +221,7 @@ const languages = {
       
       values: {
         location: "Ankara, Türkiye",
-        availability: "Yeni fırsatlara açığım"
+        availability: "Fırsatlara Açığım"
       },
       
       form: {
@@ -284,7 +284,7 @@ const languages = {
     
     // Header
     header: {
-      lookingForWork: "Open to new opportunities",
+      lookingForWork: "Open to Opportunities",
       darkTheme: "Dark Mode", 
       lightTheme: "Light Mode"
     },
@@ -492,7 +492,7 @@ const languages = {
       
       values: {
         location: "Ankara, Turkey",
-        availability: "Open to new opportunities"
+        availability: "Open to opportunities"
       },
       
       form: {

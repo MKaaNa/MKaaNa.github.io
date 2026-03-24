@@ -3,6 +3,20 @@
  * Tracks visitors, page views, session duration, and more
  */
 
+function portfolioGa4Enabled() {
+  const id = (typeof window !== 'undefined' && window.GA4_MEASUREMENT_ID)
+    ? String(window.GA4_MEASUREMENT_ID).trim()
+    : '';
+  return /^G-[A-Z0-9]+$/i.test(id);
+}
+
+function portfolioGa4Event(eventName, params) {
+  if (!portfolioGa4Enabled() || typeof window.gtag !== 'function') return;
+  try {
+    window.gtag('event', eventName, params && typeof params === 'object' ? params : {});
+  } catch (e) {}
+}
+
 class PortfolioAnalytics {
   constructor() {
     this.storageKey = 'portfolioAnalytics';
@@ -10,6 +24,7 @@ class PortfolioAnalytics {
     this.currentSession = this.initSession();
     this.analytics = this.loadAnalytics();
     this.startTime = Date.now();
+    this.ga4ScrollSent = Object.create(null);
     
     this.init();
   }
@@ -219,6 +234,33 @@ class PortfolioAnalytics {
       referrerHost,
       linkedInJobId
     };
+
+    this.sendGa4TrafficContext();
+  }
+
+  sendGa4TrafficContext() {
+    try {
+      if (sessionStorage.getItem('ga4_portfolio_traffic_sent')) return;
+      const a = this.currentSession.attribution || {};
+      const params = {
+        traffic_type: a.linkedInJobId
+          ? 'linkedin_job'
+          : (a.referrerHost ? 'referrer' : 'direct')
+      };
+      if (a.referrerHost) {
+        params.page_referrer_host = String(a.referrerHost).substring(0, 100);
+      }
+      if (a.linkedInJobId) {
+        params.linkedin_job_id = String(a.linkedInJobId).substring(0, 64);
+      }
+      const utm = a.utm || {};
+      if (utm.utm_source) params.utm_source = String(utm.utm_source).substring(0, 100);
+      if (utm.utm_medium) params.utm_medium = String(utm.utm_medium).substring(0, 100);
+      if (utm.utm_campaign) params.utm_campaign = String(utm.utm_campaign).substring(0, 100);
+      if (utm.utm_content) params.utm_content = String(utm.utm_content).substring(0, 100);
+      portfolioGa4Event('portfolio_traffic', params);
+      sessionStorage.setItem('ga4_portfolio_traffic_sent', '1');
+    } catch (e) {}
   }
 
   setupEventListeners() {
@@ -233,6 +275,14 @@ class PortfolioAnalytics {
         if (scrollPercent > maxScroll) {
           maxScroll = scrollPercent;
           this.currentSession.maxScrollPercent = maxScroll;
+          const milestones = [25, 50, 75, 100];
+          for (let i = 0; i < milestones.length; i++) {
+            const m = milestones[i];
+            if (maxScroll >= m && !this.ga4ScrollSent[m]) {
+              this.ga4ScrollSent[m] = true;
+              portfolioGa4Event('scroll_depth', { percent_scrolled: m });
+            }
+          }
         }
         scrollTimeout = null;
       });
@@ -254,10 +304,16 @@ class PortfolioAnalytics {
           if (isCvDownload) {
             this.currentSession.cvDownloads = (this.currentSession.cvDownloads || 0) + 1;
             this.analytics.cvDownloads = (this.analytics.cvDownloads || 0) + 1;
+            portfolioGa4Event('cv_download', {
+              file: 'CV_Musa_Kaan_Altin.pdf'
+            });
           }
 
           if (section) {
             this.analytics.clickTargets.sections[section] = (this.analytics.clickTargets.sections[section] || 0) + 1;
+            portfolioGa4Event('nav_section_click', {
+              section_id: String(section).substring(0, 64)
+            });
           }
 
           if (href && (isCvDownload || (hrefAttr && hrefAttr.startsWith('#')))) {
@@ -281,6 +337,10 @@ class PortfolioAnalytics {
       this.trackEvent('form_submit', {
         form: e.target.action || 'contact_form'
       });
+      const form = e.target;
+      if (form && form.id === 'contact-form') {
+        portfolioGa4Event('contact_form_submit', { form_id: 'contact' });
+      }
     });
   }
 
@@ -311,6 +371,11 @@ class PortfolioAnalytics {
       this.analytics.dwellTime.sessions++;
       this.analytics.dwellTime.totalDurationMs += durationMs;
       this.analytics.dwellTime.maxDurationMs = Math.max(this.analytics.dwellTime.maxDurationMs || 0, durationMs);
+
+      portfolioGa4Event('portfolio_session_end', {
+        max_scroll_percent: maxScroll,
+        duration_seconds: Math.round(durationMs / 1000)
+      });
     }
     this.saveAnalytics();
   }
