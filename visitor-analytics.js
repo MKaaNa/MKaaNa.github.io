@@ -17,6 +17,17 @@ function portfolioGa4Event(eventName, params) {
   } catch (e) {}
 }
 
+function truncateAnalyticsValue(value, maxLength) {
+  if (typeof value !== 'string') return '';
+  return value.substring(0, maxLength);
+}
+
+function getTrafficSourceLabel(trafficType) {
+  if (trafficType === 'linkedin_job') return 'LinkedIn Job Post';
+  if (trafficType === 'referrer') return 'Referral Website';
+  return 'Direct Visit';
+}
+
 class PortfolioAnalytics {
   constructor() {
     this.storageKey = 'portfolioAnalytics';
@@ -176,6 +187,16 @@ class PortfolioAnalytics {
   }
 
   getUtmParams() {
+    if (typeof window !== 'undefined' && window.GA4_TRAFFIC_CONTEXT) {
+      return {
+        utm_source: window.GA4_TRAFFIC_CONTEXT.utm_source || '',
+        utm_medium: window.GA4_TRAFFIC_CONTEXT.utm_medium || '',
+        utm_campaign: window.GA4_TRAFFIC_CONTEXT.utm_campaign || '',
+        utm_term: window.GA4_TRAFFIC_CONTEXT.utm_term || '',
+        utm_content: window.GA4_TRAFFIC_CONTEXT.utm_content || ''
+      };
+    }
+
     try {
       const params = new URLSearchParams(window.location.search);
       const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
@@ -207,9 +228,14 @@ class PortfolioAnalytics {
 
   trackAttribution() {
     const utm = this.getUtmParams();
+    const sharedTrafficContext = (typeof window !== 'undefined' && window.GA4_TRAFFIC_CONTEXT)
+      ? window.GA4_TRAFFIC_CONTEXT
+      : null;
 
-    let referrerHost = '';
-    if (document.referrer && !document.referrer.includes(window.location.hostname)) {
+    let referrerHost = sharedTrafficContext && sharedTrafficContext.referrerHost
+      ? sharedTrafficContext.referrerHost
+      : '';
+    if (!referrerHost && document.referrer && !document.referrer.includes(window.location.hostname)) {
       try {
         referrerHost = new URL(document.referrer).hostname;
       } catch (e) {
@@ -217,7 +243,9 @@ class PortfolioAnalytics {
       }
     }
 
-    const linkedInJobId = this.extractLinkedInJobId(document.referrer);
+    const linkedInJobId = sharedTrafficContext && sharedTrafficContext.linkedInJobId
+      ? sharedTrafficContext.linkedInJobId
+      : this.extractLinkedInJobId(document.referrer);
 
     const keyParts = [];
     if (utm.utm_source) keyParts.push(`source:${utm.utm_source}`);
@@ -242,22 +270,41 @@ class PortfolioAnalytics {
     try {
       if (sessionStorage.getItem('ga4_portfolio_traffic_sent')) return;
       const a = this.currentSession.attribution || {};
+      const trafficType = a.linkedInJobId ? 'linkedin_job' : (a.referrerHost ? 'referrer' : 'direct');
+      const userProperties = {
+        traffic_type: trafficType,
+        traffic_source_label: getTrafficSourceLabel(trafficType),
+        initial_referrer_host: a.referrerHost || '(direct)',
+        referrer_domain: a.referrerHost || '(direct)',
+        linkedin_job_id: truncateAnalyticsValue(a.linkedInJobId || '', 64),
+        linkedin_job_post_id: truncateAnalyticsValue(a.linkedInJobId || '', 64),
+        initial_utm_source: truncateAnalyticsValue((a.utm || {}).utm_source || '(not set)', 100),
+        initial_utm_medium: truncateAnalyticsValue((a.utm || {}).utm_medium || '(not set)', 100),
+        initial_utm_campaign: truncateAnalyticsValue((a.utm || {}).utm_campaign || '(not set)', 100),
+        first_source: truncateAnalyticsValue((a.utm || {}).utm_source || '(direct)', 100),
+        first_medium: truncateAnalyticsValue((a.utm || {}).utm_medium || '(none)', 100),
+        first_campaign: truncateAnalyticsValue((a.utm || {}).utm_campaign || '(not set)', 100)
+      };
+      window.gtag('set', 'user_properties', userProperties);
+
       const params = {
-        traffic_type: a.linkedInJobId
-          ? 'linkedin_job'
-          : (a.referrerHost ? 'referrer' : 'direct')
+        traffic_type: userProperties.traffic_type,
+        traffic_source_label: userProperties.traffic_source_label
       };
       if (a.referrerHost) {
-        params.page_referrer_host = String(a.referrerHost).substring(0, 100);
+        params.page_referrer_host = truncateAnalyticsValue(String(a.referrerHost), 100);
+        params.referrer_domain = truncateAnalyticsValue(String(a.referrerHost), 100);
       }
       if (a.linkedInJobId) {
-        params.linkedin_job_id = String(a.linkedInJobId).substring(0, 64);
+        params.linkedin_job_id = truncateAnalyticsValue(String(a.linkedInJobId), 64);
+        params.linkedin_job_post_id = truncateAnalyticsValue(String(a.linkedInJobId), 64);
       }
       const utm = a.utm || {};
-      if (utm.utm_source) params.utm_source = String(utm.utm_source).substring(0, 100);
-      if (utm.utm_medium) params.utm_medium = String(utm.utm_medium).substring(0, 100);
-      if (utm.utm_campaign) params.utm_campaign = String(utm.utm_campaign).substring(0, 100);
-      if (utm.utm_content) params.utm_content = String(utm.utm_content).substring(0, 100);
+      if (utm.utm_source) params.utm_source = truncateAnalyticsValue(String(utm.utm_source), 100);
+      if (utm.utm_medium) params.utm_medium = truncateAnalyticsValue(String(utm.utm_medium), 100);
+      if (utm.utm_campaign) params.utm_campaign = truncateAnalyticsValue(String(utm.utm_campaign), 100);
+      if (utm.utm_term) params.utm_term = truncateAnalyticsValue(String(utm.utm_term), 100);
+      if (utm.utm_content) params.utm_content = truncateAnalyticsValue(String(utm.utm_content), 100);
       portfolioGa4Event('portfolio_traffic', params);
       sessionStorage.setItem('ga4_portfolio_traffic_sent', '1');
     } catch (e) {}

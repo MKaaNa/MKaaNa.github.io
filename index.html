@@ -60,13 +60,115 @@
   </script>
   <script>
     (function () {
+      function truncate(value, maxLength) {
+        if (typeof value !== 'string') return '';
+        return value.substring(0, maxLength);
+      }
+
+      function extractLinkedInJobId(referrerUrl) {
+        try {
+          var url = new URL(referrerUrl);
+          if (!url.hostname || url.hostname.indexOf('linkedin.com') === -1) return '';
+          var queryJobId = url.searchParams.get('jk');
+          if (queryJobId) return queryJobId;
+          var match = url.pathname.match(/\/jobs\/view\/([^\/?#]+)/i);
+          return match && match[1] ? match[1] : '';
+        } catch (e) {
+          return '';
+        }
+      }
+
+      function getTrafficContext() {
+        var params = new URLSearchParams(window.location.search);
+        var referrer = document.referrer || '';
+        var safeReferrer = '';
+        var referrerHost = '';
+
+        if (referrer && referrer.indexOf(window.location.hostname) === -1) {
+          safeReferrer = truncate(referrer, 500);
+          try {
+            referrerHost = truncate(new URL(referrer).hostname, 100);
+          } catch (e) {
+            referrerHost = '';
+          }
+        }
+
+        var context = {
+          referrer: safeReferrer,
+          referrerHost: referrerHost,
+          linkedInJobId: truncate(extractLinkedInJobId(referrer), 64),
+          utm_source: truncate(params.get('utm_source') || '', 100),
+          utm_medium: truncate(params.get('utm_medium') || '', 100),
+          utm_campaign: truncate(params.get('utm_campaign') || '', 100),
+          utm_term: truncate(params.get('utm_term') || '', 100),
+          utm_content: truncate(params.get('utm_content') || '', 100)
+        };
+
+        context.trafficType = context.linkedInJobId
+          ? 'linkedin_job'
+          : (context.referrerHost ? 'referrer' : 'direct');
+
+        return context;
+      }
+
+      function getTrafficSourceLabel(trafficType) {
+        if (trafficType === 'linkedin_job') return 'LinkedIn Job Post';
+        if (trafficType === 'referrer') return 'Referral Website';
+        return 'Direct Visit';
+      }
+
       var id = (window.GA4_MEASUREMENT_ID || '').trim();
       if (!/^G-[A-Z0-9]+$/i.test(id)) return;
+      var traffic = getTrafficContext();
+      window.GA4_TRAFFIC_CONTEXT = traffic;
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       window.gtag = gtag;
       gtag('js', new Date());
-      gtag('config', id);
+
+      var config = {
+        send_page_view: false
+      };
+      if (traffic.referrer) config.page_referrer = traffic.referrer;
+      if (traffic.utm_source) config.campaign_source = traffic.utm_source;
+      if (traffic.utm_medium) config.campaign_medium = traffic.utm_medium;
+      if (traffic.utm_campaign) config.campaign_name = traffic.utm_campaign;
+      if (traffic.utm_term) config.campaign_term = traffic.utm_term;
+      if (traffic.utm_content) config.campaign_content = traffic.utm_content;
+
+      gtag('config', id, config);
+      gtag('set', 'user_properties', {
+        traffic_type: traffic.trafficType,
+        traffic_source_label: getTrafficSourceLabel(traffic.trafficType),
+        initial_referrer_host: traffic.referrerHost || '(direct)',
+        referrer_domain: traffic.referrerHost || '(direct)',
+        linkedin_job_id: traffic.linkedInJobId || '',
+        linkedin_job_post_id: traffic.linkedInJobId || '',
+        initial_utm_source: traffic.utm_source || '(not set)',
+        initial_utm_medium: traffic.utm_medium || '(not set)',
+        initial_utm_campaign: traffic.utm_campaign || '(not set)',
+        first_source: traffic.utm_source || '(direct)',
+        first_medium: traffic.utm_medium || '(none)',
+        first_campaign: traffic.utm_campaign || '(not set)'
+      });
+      gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: window.location.pathname + window.location.search + window.location.hash,
+        page_referrer: traffic.referrer || undefined,
+        traffic_type: traffic.trafficType,
+        traffic_source_label: getTrafficSourceLabel(traffic.trafficType),
+        page_referrer_host: traffic.referrerHost || '(direct)',
+        referrer_domain: traffic.referrerHost || '(direct)',
+        linkedin_job_id: traffic.linkedInJobId || undefined,
+        linkedin_job_post_id: traffic.linkedInJobId || undefined,
+        utm_source: traffic.utm_source || undefined,
+        utm_medium: traffic.utm_medium || undefined,
+        utm_campaign: traffic.utm_campaign || undefined,
+        utm_term: traffic.utm_term || undefined,
+        utm_content: traffic.utm_content || undefined
+      });
+
       var s = document.createElement('script');
       s.async = true;
       s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);
