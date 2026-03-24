@@ -60,9 +60,44 @@
   </script>
   <script>
     (function () {
+      var TRACKING_QUERY_KEYS = [
+        'utm_source',
+        'utm_medium',
+        'utm_campaign',
+        'utm_term',
+        'utm_content',
+        'utm_id',
+        'utm_source_platform',
+        'utm_creative_format',
+        'utm_marketing_tactic',
+        'gclid',
+        'fbclid',
+        'msclkid'
+      ];
+
       function truncate(value, maxLength) {
         if (typeof value !== 'string') return '';
         return value.substring(0, maxLength);
+      }
+
+      function stripTrackingParamsFromUrl() {
+        try {
+          var url = new URL(window.location.href);
+          var hasTrackingParams = false;
+
+          TRACKING_QUERY_KEYS.forEach(function (key) {
+            if (url.searchParams.has(key)) {
+              url.searchParams.delete(key);
+              hasTrackingParams = true;
+            }
+          });
+
+          if (!hasTrackingParams) return;
+
+          var cleanQuery = url.searchParams.toString();
+          var cleanUrl = url.pathname + (cleanQuery ? '?' + cleanQuery : '') + url.hash;
+          history.replaceState(null, '', cleanUrl);
+        } catch (e) {}
       }
 
       function extractLinkedInJobId(referrerUrl) {
@@ -118,17 +153,13 @@
       }
 
       var id = (window.GA4_MEASUREMENT_ID || '').trim();
-      if (!/^G-[A-Z0-9]+$/i.test(id)) return;
       var traffic = getTrafficContext();
       window.GA4_TRAFFIC_CONTEXT = traffic;
 
-      // UTM parametrelerini URL'den gizle (veri kaybolmaz)
-      if (traffic.utm_source || traffic.utm_medium || traffic.utm_campaign || traffic.utm_term || traffic.utm_content) {
-        try {
-          var cleanUrl = window.location.pathname + window.location.hash;
-          history.replaceState(null, '', cleanUrl);
-        } catch (e) {}
-      }
+      // Takip parametrelerini sayfa yüklendikten hemen sonra URL'den gizle.
+      stripTrackingParamsFromUrl();
+
+      if (!/^G-[A-Z0-9]+$/i.test(id)) return;
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       window.gtag = gtag;
