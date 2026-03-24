@@ -121,6 +121,14 @@
       if (!/^G-[A-Z0-9]+$/i.test(id)) return;
       var traffic = getTrafficContext();
       window.GA4_TRAFFIC_CONTEXT = traffic;
+
+      // UTM parametrelerini URL'den gizle (veri kaybolmaz)
+      if (traffic.utm_source || traffic.utm_medium || traffic.utm_campaign || traffic.utm_term || traffic.utm_content) {
+        try {
+          var cleanUrl = window.location.pathname + window.location.hash;
+          history.replaceState(null, '', cleanUrl);
+        } catch (e) {}
+      }
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       window.gtag = gtag;
@@ -130,11 +138,6 @@
         send_page_view: false
       };
       if (traffic.referrer) config.page_referrer = traffic.referrer;
-      if (traffic.utm_source) config.campaign_source = traffic.utm_source;
-      if (traffic.utm_medium) config.campaign_medium = traffic.utm_medium;
-      if (traffic.utm_campaign) config.campaign_name = traffic.utm_campaign;
-      if (traffic.utm_term) config.campaign_term = traffic.utm_term;
-      if (traffic.utm_content) config.campaign_content = traffic.utm_content;
 
       gtag('config', id, config);
       gtag('set', 'user_properties', {
@@ -162,11 +165,11 @@
         referrer_domain: traffic.referrerHost || '(direct)',
         linkedin_job_id: traffic.linkedInJobId || undefined,
         linkedin_job_post_id: traffic.linkedInJobId || undefined,
-        utm_source: traffic.utm_source || undefined,
-        utm_medium: traffic.utm_medium || undefined,
-        utm_campaign: traffic.utm_campaign || undefined,
-        utm_term: traffic.utm_term || undefined,
-        utm_content: traffic.utm_content || undefined
+        campaign_source: traffic.utm_source || undefined,
+        campaign_medium: traffic.utm_medium || undefined,
+        campaign_name: traffic.utm_campaign || undefined,
+        campaign_term: traffic.utm_term || undefined,
+        campaign_content: traffic.utm_content || undefined
       });
 
       var s = document.createElement('script');
