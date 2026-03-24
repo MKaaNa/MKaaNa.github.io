@@ -53,6 +53,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+  <!-- Google Analytics 4 (ücretsiz; backend gerekmez). GA4 > Yönetim > Veri akışları > Web > Ölçüm kimliği -->
+  <script>
+    window.GA4_MEASUREMENT_ID = 'G-77XVV8S40K';
+  </script>
+  <script>
+    (function () {
+      var id = (window.GA4_MEASUREMENT_ID || '').trim();
+      if (!/^G-[A-Z0-9]+$/i.test(id)) return;
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', id);
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);
+      document.head.appendChild(s);
+    })();
+  </script>
   
   <!-- Counter.dev Analytics -->
   <script src="https://cdn.counter.dev/script.js"
@@ -147,8 +167,8 @@
         
         <!-- Looking for Work Button -->
         <div class="looking-for-work">
-          <a href="mailto:mkaanaltin@gmail.com?subject=İş Fırsatı&body=Merhaba Kaan,%0D%0A%0D%0Aİş fırsatı hakkında görüşmek istiyorum.%0D%0A%0D%0Aİletişim bilgilerim:%0D%0A%0D%0A" class="work-btn" data-lang="header.lookingForWork" aria-label="Yeni fırsatlara açığım için e-posta gönder">
-            Yeni fırsatlara açığım
+          <a href="mailto:mkaanaltin@gmail.com?subject=İş Fırsatı&body=Merhaba Kaan,%0D%0A%0D%0Aİş fırsatı hakkında görüşmek istiyorum.%0D%0A%0D%0Aİletişim bilgilerim:%0D%0A%0D%0A" class="work-btn" data-lang="header.lookingForWork" aria-label="Fırsatlara Açığım için e-posta gönder">
+            Fırsatlara Açığım
           </a>
         </div>
         
@@ -1117,7 +1137,7 @@
                 </div>
                 <div class="contact-details">
                   <span class="contact-label" data-lang="contact.methods.availability">Müsaitlik</span>
-                  <span class="contact-value" data-lang="contact.values.availability">Yeni fırsatlara açığım</span>
+                  <span class="contact-value" data-lang="contact.values.availability">Fırsatlara Açığım</span>
                 </div>
               </div>
             </div>
