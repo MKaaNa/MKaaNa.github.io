@@ -36,6 +36,11 @@ class PortfolioAnalytics {
     this.analytics = this.loadAnalytics();
     this.startTime = Date.now();
     this.ga4ScrollSent = Object.create(null);
+    this.sectionVisibility = Object.create(null);
+    this.sectionSeen = Object.create(null);
+    this.activeSectionId = '';
+    this.activeSectionStartedAt = 0;
+    this.sectionObserver = null;
     
     this.init();
   }
@@ -44,6 +49,7 @@ class PortfolioAnalytics {
     this.trackPageView();
     this.trackVisitor();
     this.setupEventListeners();
+    this.setupSectionTracking();
     this.updateDisplay();
     
     // Update session duration every 30 seconds
@@ -70,7 +76,8 @@ class PortfolioAnalytics {
       duration: 0,
       maxScrollPercent: 0,
       cvDownloads: 0,
-      counted: false
+      counted: false,
+      sectionEngagement: {}
     };
     
     sessionStorage.setItem(this.sessionKey, JSON.stringify(newSession));
@@ -98,6 +105,7 @@ class PortfolioAnalytics {
       devices: {},
       browsers: {},
       countries: {},
+      sectionEngagement: {},
       lastVisit: null,
       firstVisit: Date.now()
     };
@@ -389,6 +397,122 @@ class PortfolioAnalytics {
         portfolioGa4Event('contact_form_submit', { form_id: 'contact' });
       }
     });
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') {
+        this.pauseSectionTracking('tab_hidden');
+        return;
+      }
+      this.resumeSectionTracking();
+    });
+  }
+
+  setupSectionTracking() {
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    if (!sections.length || typeof IntersectionObserver !== 'function') return;
+
+    sections.forEach((section) => {
+      const sectionId = String(section.id || '').trim();
+      if (!sectionId) return;
+      this.sectionVisibility[sectionId] = 0;
+      if (!this.analytics.sectionEngagement[sectionId]) {
+        this.analytics.sectionEngagement[sectionId] = { totalDurationMs: 0, views: 0 };
+      }
+    });
+
+    this.sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const sectionId = entry.target && entry.target.id ? String(entry.target.id) : '';
+        if (!sectionId) return;
+        this.sectionVisibility[sectionId] = entry.isIntersecting ? entry.intersectionRatio : 0;
+
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.35 && !this.sectionSeen[sectionId]) {
+          this.sectionSeen[sectionId] = true;
+          if (!this.analytics.sectionEngagement[sectionId]) {
+            this.analytics.sectionEngagement[sectionId] = { totalDurationMs: 0, views: 0 };
+          }
+          this.analytics.sectionEngagement[sectionId].views++;
+          portfolioGa4Event('section_view', {
+            section_id: sectionId.substring(0, 64)
+          });
+        }
+      });
+
+      this.refreshActiveSection();
+    }, {
+      threshold: [0, 0.2, 0.35, 0.5, 0.75]
+    });
+
+    sections.forEach((section) => this.sectionObserver.observe(section));
+    this.refreshActiveSection();
+  }
+
+  refreshActiveSection() {
+    if (document.visibilityState === 'hidden') {
+      this.pauseSectionTracking('tab_hidden');
+      return;
+    }
+
+    let nextSectionId = '';
+    let bestRatio = 0;
+    Object.keys(this.sectionVisibility).forEach((sectionId) => {
+      const ratio = this.sectionVisibility[sectionId] || 0;
+      if (ratio >= 0.35 && ratio > bestRatio) {
+        bestRatio = ratio;
+        nextSectionId = sectionId;
+      }
+    });
+
+    this.setActiveSection(nextSectionId, bestRatio ? 'section_change' : 'out_of_view');
+  }
+
+  setActiveSection(nextSectionId, reason) {
+    const now = Date.now();
+    if (this.activeSectionId && this.activeSectionStartedAt) {
+      this.recordSectionTime(this.activeSectionId, now - this.activeSectionStartedAt, reason || 'section_change');
+    }
+
+    this.activeSectionId = nextSectionId || '';
+    this.activeSectionStartedAt = this.activeSectionId ? now : 0;
+  }
+
+  pauseSectionTracking(reason) {
+    if (!this.activeSectionId || !this.activeSectionStartedAt) return;
+    const now = Date.now();
+    this.recordSectionTime(this.activeSectionId, now - this.activeSectionStartedAt, reason || 'pause');
+    this.activeSectionStartedAt = 0;
+  }
+
+  resumeSectionTracking() {
+    if (!this.activeSectionId) {
+      this.refreshActiveSection();
+      return;
+    }
+    if (!this.activeSectionStartedAt) {
+      this.activeSectionStartedAt = Date.now();
+    }
+  }
+
+  recordSectionTime(sectionId, durationMs, reason) {
+    if (!sectionId || !durationMs || durationMs < 250) return;
+
+    if (!this.currentSession.sectionEngagement[sectionId]) {
+      this.currentSession.sectionEngagement[sectionId] = { totalDurationMs: 0 };
+    }
+    this.currentSession.sectionEngagement[sectionId].totalDurationMs += durationMs;
+
+    if (!this.analytics.sectionEngagement[sectionId]) {
+      this.analytics.sectionEngagement[sectionId] = { totalDurationMs: 0, views: 0 };
+    }
+    this.analytics.sectionEngagement[sectionId].totalDurationMs += durationMs;
+
+    if (durationMs >= 3000) {
+      portfolioGa4Event('section_engagement', {
+        section_id: String(sectionId).substring(0, 64),
+        seconds_spent: Math.round(durationMs / 1000),
+        exit_reason: String(reason || 'section_change').substring(0, 32)
+      });
+    }
   }
 
   trackEvent(event, data = {}) {
@@ -404,6 +528,7 @@ class PortfolioAnalytics {
   }
 
   onPageUnload() {
+    this.pauseSectionTracking('page_unload');
     this.updateSessionDuration();
     if (!this.currentSession.counted) {
       this.currentSession.counted = true;
@@ -419,9 +544,22 @@ class PortfolioAnalytics {
       this.analytics.dwellTime.totalDurationMs += durationMs;
       this.analytics.dwellTime.maxDurationMs = Math.max(this.analytics.dwellTime.maxDurationMs || 0, durationMs);
 
+      const sectionEntries = Object.entries(this.currentSession.sectionEngagement || {});
+      let topSectionId = '';
+      let topSectionDurationMs = 0;
+      sectionEntries.forEach(([sectionId, data]) => {
+        const totalDurationMs = data && data.totalDurationMs ? data.totalDurationMs : 0;
+        if (totalDurationMs > topSectionDurationMs) {
+          topSectionId = sectionId;
+          topSectionDurationMs = totalDurationMs;
+        }
+      });
+
       portfolioGa4Event('portfolio_session_end', {
         max_scroll_percent: maxScroll,
-        duration_seconds: Math.round(durationMs / 1000)
+        duration_seconds: Math.round(durationMs / 1000),
+        top_section_id: topSectionId || undefined,
+        top_section_seconds: topSectionDurationMs ? Math.round(topSectionDurationMs / 1000) : undefined
       });
     }
     this.saveAnalytics();
@@ -493,6 +631,7 @@ class PortfolioAnalytics {
       attributions: this.analytics.attributions,
       cvDownloads: this.analytics.cvDownloads || 0,
       clickTargets: this.analytics.clickTargets,
+      sectionEngagement: this.analytics.sectionEngagement,
       engagement: {
         avgMaxScrollPercent: avgMaxScroll,
         maxMaxScrollPercent: this.analytics.scrollDepth.maxScroll || 0,
