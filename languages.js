@@ -13,7 +13,7 @@ const languages = {
     
     // Header
     header: {
-      lookingForWork: "Fırsatlara Açığım",
+      lookingForWork: "İletişim",
       darkTheme: "Koyu Temaya Geç", 
       lightTheme: "Açık Temaya Geç"
     },
@@ -26,7 +26,13 @@ const languages = {
       description: "Güvenli mikroservisler ve FinTech sistemleri geliştiriyorum. Spring Boot, Spring Security, JWT ve REST API ile ölçeklenebilir kurumsal çözümler üretiyorum.",
       viewProjects: "Projelerimi Gör",
       contactMe: "Benimle İletişime Geç",
-      downloadCV: "CV İndir"
+      downloadCV: "CV İndir",
+      meta: {
+        level: "Junior",
+        experience: "20+ Ay Deneyim",
+        workType: "Hybrid / Remote",
+        location: "Ankara"
+      }
     },
     
     // About Section
@@ -34,7 +40,7 @@ const languages = {
       title: "Hakkımda",
       subtitle: "",
       jobTitle: "Java Backend Developer",
-      intro1: "Merhaba, ben Kaan. OSTIM Teknik Üniversitesi Bilgisayar Mühendisliği mezunuyum (2021–2025). Java tabanlı kurumsal sistemlerde, üretim ortamında deneyim kazanmış bir Full Stack geliştiriciyim. Şu anda Başarı Mobile'da Yazılım Geliştirme Uzman Yardımcısı — Backend Geliştirici olarak çalışıyorum; aynı zamanda yeni fırsatlara açığım.",
+      intro1: "Merhaba, ben Kaan. OSTIM Teknik Üniversitesi Bilgisayar Mühendisliği mezunuyum (2021–2025). Java tabanlı kurumsal sistemlerde üretim ortamı deneyimine sahip bir Backend Geliştirici olarak çalışıyorum. Şu anda Başarı Mobile'da Spring Boot ve mikroservis mimarisiyle güvenli backend servisleri geliştiriyorum; aynı zamanda yeni fırsatlara açığım.",
       intro2: "Güvenli backend servisleri, veri tutarlılığı, JWT tabanlı kimlik doğrulama ve yetkilendirme ile işlemsel sistemler üzerine çalıştım. Ziraat Teknoloji, FDN Soft, STM, Karel, Mobiliz ve Crypttech gibi firmalarda staj ve tam zamanlı deneyim edindim. FinTech, savunma sanayi ve IoT alanlarında uygulamalı tecrübe kazandım.",
       intro3: "Analitik düşünen, veriye dayalı problem çözmeyi benimseyen ve ekip içinde iş birliğiyle çalışmaya uyum sağlayan bir yapıya sahibim. Mikroservis mimarileri, FinTech çözümleri ve ölçeklenebilir kritik iş uygulamalarında sorumluluk alarak gelişmeyi hedefliyorum.",
       
@@ -62,9 +68,9 @@ const languages = {
       
       basari: {
         company: "Başarı Mobile",
-        date: "08/2025 – Devam",
+        date: "10/2025 – Devam",
         position: "Yazılım Geliştirme Uzman Yardımcısı — Backend Geliştirici",
-        description: "Java, Spring Boot ve mikroservis mimarisi kullanarak kurumsal platformlar için 2 adet backend modül geliştirdim. Spring Security altyapısı ile JWT tabanlı kimlik doğrulama ve yetkilendirme içeren 6 adet güvenli REST API sundum. Canlıda kullanılan sistemlerde özellik geliştirme, hata düzeltme ve sistem kararlılığını artırmaya yönelik çalışmalara katkı sağladım."
+        description: "Spring Cloud Gateway ile mikroservis mimarisinde merkezi API Gateway geliştirdim; JWT doğrulama, multi-tenant kontrolü ve backend servislerine routing süreçlerini yönettim. Production ortamında çalışan sistemlerde feature geliştirme, bugfix ve sistem kararlılığını artırmaya yönelik çalışmalar yürüttüm. Aktif olarak veri girişi olan canlı sistemlerde yazılım, arayüz geliştirme ile bugfix süreçlerinde görev alıyorum."
       },
       
       fdn: {
@@ -137,9 +143,14 @@ const languages = {
     skills: {
       title: "Teknoloji Stack'im",
       subtitle: "Projelerimde aktif olarak kullandığım teknolojiler",
+      groups: {
+        backend: "Backend Core",
+        infra: "Data & Infrastructure",
+        other: "Frontend & Diğer"
+      },
       stats: {
         projects: "Tamamlanan Proje",
-        experience: "Ay Deneyim", 
+        experience: "Ay Deneyim",
         internships: "Şirket Deneyimi"
       }
     },
@@ -211,17 +222,17 @@ const languages = {
       heading: "Birlikte çalışalım!",
       description: "Yeni projeler, iş fırsatları veya teknoloji hakkında sohbet etmek istiyorsanız, benimle iletişime geçmekten çekinmeyin.",
       downloadCV: "CV İndir",
+      responseNote: "Genellikle 24 saat içinde yanıt veririm.",
       
       methods: {
         email: "Email",
-        phone: "Telefon",
         location: "Lokasyon",
         availability: "Müsaitlik"
       },
       
       values: {
         location: "Ankara, Türkiye",
-        availability: "Fırsatlara Açığım"
+        availability: "Yeni Projeler & İşbirlikleri"
       },
       
       form: {
@@ -242,7 +253,7 @@ const languages = {
     
     // Footer
     footer: {
-      copyright: "&copy; 2025 Musa Kaan Altın. Tüm hakları saklıdır."
+      copyright: "&copy; 2026 Musa Kaan Altın. Tüm hakları saklıdır."
     },
     
     // Admin Panel
@@ -284,7 +295,7 @@ const languages = {
     
     // Header
     header: {
-      lookingForWork: "Open to Opportunities",
+      lookingForWork: "Contact",
       darkTheme: "Dark Mode", 
       lightTheme: "Light Mode"
     },
@@ -293,11 +304,17 @@ const languages = {
     hero: {
       greeting: "Hello, I'm",
       name: "Musa Kaan Altın",
-      title: "Java Backend Developer", 
+      title: "Java Backend Developer",
       description: "Building secure microservices and FinTech systems. I build scalable enterprise solutions with Spring Boot, Spring Security, JWT and REST APIs.",
       viewProjects: "View My Projects",
       contactMe: "Get In Touch",
-      downloadCV: "Download CV"
+      downloadCV: "Download CV",
+      meta: {
+        level: "Junior",
+        experience: "20+ Months Exp.",
+        workType: "Hybrid / Remote",
+        location: "Ankara"
+      }
     },
     
     // About Section
@@ -305,7 +322,7 @@ const languages = {
       title: "About Me",
       subtitle: "",
       jobTitle: "Java Backend Developer",
-      intro1: "Hello, I'm Kaan. I'm a Computer Engineering graduate from OSTIM Technical University (2021–2025). I'm a Full Stack developer with production experience in Java-based enterprise systems. I currently work as Software Development Specialist Assistant — Backend Developer at Başarı Mobile, and I'm open to new opportunities.",
+      intro1: "Hello, I'm Kaan. I'm a Computer Engineering graduate from OSTIM Technical University (2021–2025). I'm a Backend Developer with production experience in Java-based enterprise systems. I currently work at Başarı Mobile developing secure backend services with Spring Boot and microservice architecture, and I'm open to new opportunities.",
       intro2: "I've worked on secure backend services, data consistency, JWT-based authentication and authorization, and transactional systems. I've gained internship and full-time experience at companies like Ziraat Technology, FDN Soft, STM, Karel, Mobiliz and Crypttech. I have hands-on experience in FinTech, defense and IoT.",
       intro3: "I'm analytical, data-driven in problem solving and collaborative in teams. I aim to take on responsibility in microservice architectures, FinTech solutions and scalable critical business applications.",
       
@@ -333,9 +350,9 @@ const languages = {
       
       basari: {
         company: "Başarı Mobile",
-        date: "08/2025 – Present",
+        date: "10/2025 – Present",
         position: "Software Development Specialist Assistant — Backend Developer",
-        description: "I developed 2 backend modules for enterprise platforms using Java, Spring Boot and microservice architecture. I delivered 6 secure REST APIs with JWT-based authentication and authorization via Spring Security. I contributed to feature development, bug fixes and system stability in production systems."
+        description: "Developed a centralized API Gateway using Spring Cloud Gateway within a microservice architecture; managed JWT validation, multi-tenant routing and backend service routing. Carried out feature development, bugfixes and system stability improvements on production systems. Currently involved in software development, UI development and bugfix processes on live systems with active data entry."
       },
       
       fdn: {
@@ -407,7 +424,12 @@ const languages = {
     // Skills Section
     skills: {
       title: "My Technology Stack",
-      subtitle: "Technologies I actively use in my projects", 
+      subtitle: "Technologies I actively use in my projects",
+      groups: {
+        backend: "Backend Core",
+        infra: "Data & Infrastructure",
+        other: "Frontend & Other"
+      },
       stats: {
         projects: "Completed Projects",
         experience: "Months Experience",
@@ -482,17 +504,17 @@ const languages = {
       heading: "Let's work together!",
       description: "If you want to chat about new projects, job opportunities or technology, don't hesitate to contact me.",
       downloadCV: "Download CV",
+      responseNote: "I usually respond within 24 hours.",
       
       methods: {
         email: "Email",
-        phone: "Phone",
         location: "Location",
         availability: "Availability"
       },
       
       values: {
         location: "Ankara, Turkey",
-        availability: "Open to opportunities"
+        availability: "New Projects & Collaborations"
       },
       
       form: {
@@ -513,7 +535,7 @@ const languages = {
     
     // Footer
     footer: {
-      copyright: "&copy; 2025 Musa Kaan Altın. All rights reserved."
+      copyright: "&copy; 2026 Musa Kaan Altın. All rights reserved."
     },
     
     // Admin Panel

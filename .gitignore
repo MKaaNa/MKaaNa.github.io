@@ -1,0 +1,9 @@
+# Backup files
+index_backup.html
+
+# Claude Code workspace
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
