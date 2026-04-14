@@ -18,7 +18,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mkaana.github.io">
   <meta property="og:image" content="https://mkaana.github.io/assets/images/og-image.jpg">
-  <meta property="og:image:alt" content="Musa Kaan Altın - Full Stack Software Developer Portfolio">
+  <meta property="og:image:alt" content="Musa Kaan Altın - Java Backend Developer Portfolio">
   <meta property="og:site_name" content="Musa Kaan Altın Portfolio">
   <meta property="og:locale" content="tr_TR">
   
@@ -46,6 +46,7 @@
   <link rel="stylesheet" href="style.css?v=20260314-ultra-premium" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style">
   <link rel="preload" href="style.css?v=20260314-ultra-premium" as="style">
   <link rel="preload" href="languages.js" as="script">
@@ -226,8 +227,7 @@
     "workLocation": {
       "@type": "Place",
       "name": "Ankara, Turkey"
-    },
-    "telephone": "+90 541 826 3290"
+    }
   }
   </script>
 </head>
@@ -272,8 +272,8 @@
         
         <!-- Looking for Work Button -->
         <div class="looking-for-work">
-          <a href="mailto:mkaanaltin@gmail.com?subject=İş Fırsatı&body=Merhaba Kaan,%0D%0A%0D%0Aİş fırsatı hakkında görüşmek istiyorum.%0D%0A%0D%0Aİletişim bilgilerim:%0D%0A%0D%0A" class="work-btn" data-lang="header.lookingForWork" aria-label="Fırsatlara Açığım için e-posta gönder">
-            Fırsatlara Açığım
+          <a href="mailto:mkaanaltin@gmail.com?subject=İşbirliği Görüşmesi&body=Merhaba Kaan,%0D%0A%0D%0AGörüşmek istediğim bir konu hakkında yazıyorum.%0D%0A%0D%0A" class="work-btn" data-lang="header.lookingForWork" aria-label="İletişime geç">
+            İletişim
           </a>
         </div>
         
@@ -283,11 +283,11 @@
           <button class="lang-btn" data-lang-switch="en" aria-label="İngilizce dil seçeneği" aria-pressed="false">🇺🇸</button>
         </div>
         
-        <div class="hamburger" aria-label="Mobil menü aç/kapat" role="button" tabindex="0">
+        <button class="hamburger" aria-label="Mobil menü aç/kapat" aria-expanded="false" type="button">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
       </div>
     </nav>
   </header>
@@ -312,6 +312,12 @@
           <p class="hero-subtitle">
             <span class="typing-text" data-lang="hero.title">Java Backend Developer</span>
           </p>
+          <div class="hero-meta">
+            <span class="hero-badge level" data-lang="hero.meta.level">Junior</span>
+            <span class="hero-badge" data-lang="hero.meta.experience">20+ Ay Deneyim</span>
+            <span class="hero-badge" data-lang="hero.meta.workType">Hybrid / Remote</span>
+            <span class="hero-badge" data-lang="hero.meta.location">Ankara</span>
+          </div>
           <p class="hero-description" data-lang="hero.description">
             Güvenli mikroservisler ve FinTech sistemleri geliştiriyorum. Spring Boot, Spring Security, JWT ve REST API ile ölçeklenebilir kurumsal çözümler üretiyorum.
           </p>
@@ -330,15 +336,27 @@
             </a>
           </div>
           <div class="social-links">
-            <a href="https://github.com/MKaaNa" class="social-link" title="GitHub" target="_blank">
+            <a href="https://github.com/MKaaNa" class="social-link" title="GitHub" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://linkedin.com/in/mkaana/" class="social-link" title="LinkedIn" target="_blank">
+            <a href="https://linkedin.com/in/mkaana/" class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="mailto:mkaanaltin@gmail.com" class="social-link" title="Email">
               <i class="fas fa-envelope"></i>
             </a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <div class="hero-photo-wrapper">
+            <div class="hero-photo-ring"></div>
+            <img src="assets/images/Kaan.JPG"
+                 alt="Musa Kaan Altın - Java Backend Developer"
+                 class="hero-profile-img">
+            <div class="available-dot" title="Fırsatlara Açık">
+              <span class="dot-pulse"></span>
+            </div>
           </div>
         </div>
       </div>
@@ -353,20 +371,20 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title" data-lang="about.title">Hakkımda</h2>
-          <p class="section-subtitle" data-lang="about.subtitle">
+          <p class="section-subtitle" data-lang="about.subtitle"></p>
         </div>
         <div class="about-content">
           <div class="about-image">
             <div class="image-container">
-              <img src="assets/images/Kaan.JPG" alt="Musa Kaan Altın - Full Stack Yazılım Geliştirici (Java / Vue) profil fotoğrafı" class="profile-image" loading="lazy">
+              <img src="assets/images/Kaan.JPG" alt="Musa Kaan Altın - Java Backend Developer profil fotoğrafı" class="profile-image" loading="lazy">
               <div class="image-overlay"></div>
             </div>
           </div>
           <div class="about-text">
             <div class="about-intro">
-              <h3 data-lang="about.jobTitle">Full Stack Yazılım Geliştirici (Java / Vue)</h3>
+              <h3 data-lang="about.jobTitle">Java Backend Developer</h3>
               <p data-lang="about.intro1">
-                Merhaba, ben Kaan. OSTIM Teknik Üniversitesi Bilgisayar Mühendisliği mezunuyum (2021–2025). Java tabanlı kurumsal sistemlerde, üretim ortamında deneyim kazanmış bir Full Stack geliştiriciyim. Şu anda Başarı Mobile'da Yazılım Geliştirme Uzman Yardımcısı — Backend Geliştirici olarak çalışıyorum; aynı zamanda yeni fırsatlara açığım.
+                Merhaba, ben Kaan. OSTIM Teknik Üniversitesi Bilgisayar Mühendisliği mezunuyum (2021–2025). Java tabanlı kurumsal sistemlerde üretim ortamı deneyimine sahip bir Backend Geliştirici olarak çalışıyorum. Şu anda Başarı Mobile'da Spring Boot ve mikroservis mimarisiyle güvenli backend servisleri geliştiriyorum; aynı zamanda yeni fırsatlara açığım.
               </p>
               <p data-lang="about.intro2">
                 Güvenli backend servisleri, veri tutarlılığı, JWT tabanlı kimlik doğrulama ve yetkilendirme ile işlemsel sistemler üzerine çalıştım. Ziraat Teknoloji, FDN Soft, STM, Karel, Mobiliz ve Crypttech gibi firmalarda staj ve tam zamanlı deneyim edindim. FinTech, savunma sanayi ve IoT alanlarında uygulamalı tecrübe kazandım.
@@ -436,15 +454,16 @@
             <div class="timeline-content">
               <div class="timeline-header">
                 <h3 class="company-name" data-lang="career.basari.company">Başarı Mobile</h3>
-                <span class="timeline-date" data-lang="career.basari.date">08/2025 – Devam</span>
+                <span class="timeline-date" data-lang="career.basari.date">10/2025 – Devam</span>
               </div>
               <h4 class="position-title" data-lang="career.basari.position">Yazılım Geliştirme Uzman Yardımcısı — Backend Geliştirici</h4>
               <p class="timeline-description" data-lang="career.basari.description">
-                Java, Spring Boot ve mikroservis mimarisi kullanarak kurumsal platformlar için 2 adet backend modül geliştirdim. Spring Security altyapısı ile JWT tabanlı kimlik doğrulama ve yetkilendirme içeren 6 adet güvenli REST API sundum. Canlıda kullanılan sistemlerde özellik geliştirme, hata düzeltme ve sistem kararlılığını artırmaya yönelik çalışmalara katkı sağladım.
+                Spring Cloud Gateway ile mikroservis mimarisinde merkezi API Gateway geliştirdim; JWT doğrulama, multi-tenant kontrolü ve backend servislerine routing süreçlerini yönettim. Production ortamında çalışan sistemlerde feature geliştirme, bugfix ve sistem kararlılığını artırmaya yönelik çalışmalar yürüttüm. Aktif olarak veri girişi olan canlı sistemlerde yazılım, arayüz geliştirme ile bugfix süreçlerinde görev alıyorum.
               </p>
               <div class="technologies">
                 <span class="tech-tag">Java</span>
                 <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">Spring Cloud Gateway</span>
                 <span class="tech-tag">Spring Security</span>
                 <span class="tech-tag">JWT</span>
                 <span class="tech-tag">Mikroservisler</span>
@@ -675,135 +694,103 @@
           <p class="section-subtitle" data-lang="skills.subtitle">Projelerimde aktif olarak kullandığım teknolojiler</p>
         </div>
         <div class="skills-content">
-          <div class="skills-grid">
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fab fa-java"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">Java & Spring Boot</span>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fab fa-angular"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">Angular</span>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fab fa-react"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">React</span>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fab fa-node-js"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">Node.js & Express.js</span>
+          <div class="skills-groups">
+
+            <!-- Backend Core -->
+            <div class="skill-group">
+              <h3 class="skill-group-title" data-lang="skills.groups.backend">
+                <i class="fas fa-server" aria-hidden="true"></i> Backend Core
+              </h3>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <div class="skill-icon"><i class="fab fa-java"></i></div>
+                  <div class="skill-info"><span class="skill-name">Java & Spring Boot</span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+                  <div class="skill-info"><span class="skill-name">Spring Security</span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon"><i class="fas fa-route"></i></div>
+                  <div class="skill-info"><span class="skill-name">Spring Cloud Gateway</span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                  <div class="skill-info"><span class="skill-name">Microservices</span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon"><i class="fas fa-plug"></i></div>
+                  <div class="skill-info"><span class="skill-name">REST API Design</span></div>
+                </div>
               </div>
             </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-mobile-alt"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">Flutter</span>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-database"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">PostgreSQL</span>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-fire"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">Firebase</span>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fab fa-vuejs"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">Vue.js</span>
+
+            <!-- Data & Infrastructure -->
+            <div class="skill-group">
+              <h3 class="skill-group-title" data-lang="skills.groups.infra">
+                <i class="fas fa-database" aria-hidden="true"></i> Data & Infrastructure
+              </h3>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <div class="skill-icon"><i class="fas fa-database"></i></div>
+                  <div class="skill-info"><span class="skill-name">PostgreSQL</span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+                  <div class="skill-info"><span class="skill-name">Redis</span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon"><i class="fas fa-exchange-alt"></i></div>
+                  <div class="skill-info"><span class="skill-name">RabbitMQ</span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                  <div class="skill-info"><span class="skill-name">Docker</span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                  <div class="skill-info"><span class="skill-name">Git & GitHub</span></div>
+                </div>
               </div>
             </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-brain"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">Python & Scikit-learn</span>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fab fa-git-alt"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">Git & GitHub</span>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-shield-alt"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">Spring Security</span>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-project-diagram"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">Microservices Architecture</span>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-plug"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">REST API Design</span>
+
+            <!-- Frontend & Diğer -->
+            <div class="skill-group skill-group--secondary">
+              <h3 class="skill-group-title" data-lang="skills.groups.other">
+                <i class="fas fa-layer-group" aria-hidden="true"></i> Frontend & Diğer
+              </h3>
+              <div class="skills-grid">
+                <div class="skill-item skill-item--secondary">
+                  <div class="skill-icon"><i class="fab fa-angular"></i></div>
+                  <div class="skill-info"><span class="skill-name">Angular</span></div>
+                </div>
+                <div class="skill-item skill-item--secondary">
+                  <div class="skill-icon"><i class="fab fa-vuejs"></i></div>
+                  <div class="skill-info"><span class="skill-name">Vue.js</span></div>
+                </div>
+                <div class="skill-item skill-item--secondary">
+                  <div class="skill-icon"><i class="fab fa-react"></i></div>
+                  <div class="skill-info"><span class="skill-name">React</span></div>
+                </div>
+                <div class="skill-item skill-item--secondary">
+                  <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                  <div class="skill-info"><span class="skill-name">Node.js</span></div>
+                </div>
+                <div class="skill-item skill-item--secondary">
+                  <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                  <div class="skill-info"><span class="skill-name">Flutter</span></div>
+                </div>
+                <div class="skill-item skill-item--secondary">
+                  <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                  <div class="skill-info"><span class="skill-name">Firebase</span></div>
+                </div>
+                <div class="skill-item skill-item--secondary">
+                  <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                  <div class="skill-info"><span class="skill-name">Python / ML</span></div>
+                </div>
               </div>
             </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-bolt"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">Redis</span>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-exchange-alt"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">RabbitMQ</span>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fab fa-docker"></i>
-              </div>
-              <div class="skill-info">
-                <span class="skill-name">Docker</span>
-              </div>
-            </div>
+
           </div>
           
           <div class="stats-section">
@@ -875,7 +862,7 @@
                   <span class="tag">Frontend</span>
                   <span class="tag">Architecture</span>
                 </div>
-                <a href="https://medium.com/@mkaanaltin/folder-structure-in-frontend-projects-react-3559659b855a" class="article-link" target="_blank">
+                <a href="https://medium.com/@mkaanaltin/folder-structure-in-frontend-projects-react-3559659b855a" class="article-link" target="_blank" rel="noopener noreferrer">
                   <i class="fas fa-external-link-alt"></i>
                   Makaleyi Oku
                 </a>
@@ -908,7 +895,7 @@
                   <span class="tag">GitHub</span>
                   <span class="tag">Version Control</span>
                 </div>
-                <a href="https://medium.com/towardsdev/introduction-02fcf9c3bb1f" class="article-link" target="_blank">
+                <a href="https://medium.com/towardsdev/introduction-02fcf9c3bb1f" class="article-link" target="_blank" rel="noopener noreferrer">
                   <i class="fas fa-external-link-alt"></i>
                   Makaleyi Oku
                 </a>
@@ -940,7 +927,7 @@
                   <span class="tag">MPA</span>
                   <span class="tag">Architecture</span>
                 </div>
-                <a href="https://medium.com/@mkaanaltin/mpa-spa-1a37d3cc93f4" class="article-link" target="_blank">
+                <a href="https://medium.com/@mkaanaltin/mpa-spa-1a37d3cc93f4" class="article-link" target="_blank" rel="noopener noreferrer">
                   <i class="fas fa-external-link-alt"></i>
                   Makaleyi Oku
                 </a>
@@ -949,7 +936,7 @@
           </div>
 
           <div class="more-articles">
-            <a href="https://medium.com/@mkaanaltin" class="btn btn-outline" target="_blank">
+            <a href="https://medium.com/@mkaanaltin" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-medium"></i>
               Tüm Yazılarım
             </a>
@@ -970,10 +957,7 @@
               <div class="project-icon"><i class="fas fa-hotel"></i></div>
               <div class="project-overlay">
                 <div class="project-links">
-                  <a href="#" class="project-link" title="Canlı Demo">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                  <a href="https://github.com/MKaaNa/OtelRezervasyon" class="project-link" title="GitHub" target="_blank">
+                  <a href="https://github.com/MKaaNa/OtelRezervasyon" class="project-link" title="GitHub" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
                   </a>
                 </div>
@@ -1016,10 +1000,7 @@
               <div class="project-icon"><i class="fas fa-puzzle-piece"></i></div>
               <div class="project-overlay">
                 <div class="project-links">
-                  <a href="#" class="project-link" title="Canlı Demo">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                  <a href="https://github.com/MKaaNa/flutter-puzzle-game" class="project-link" title="GitHub" target="_blank">
+                  <a href="https://github.com/MKaaNa/flutter-puzzle-game" class="project-link" title="GitHub" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
                   </a>
                 </div>
@@ -1057,10 +1038,7 @@
               <div class="project-icon"><i class="fas fa-university"></i></div>
               <div class="project-overlay">
                 <div class="project-links">
-                  <a href="#" class="project-link" title="Canlı Demo">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                  <a href="https://github.com/MKaaNa/fullstack-bank-app" class="project-link" title="GitHub" target="_blank">
+                  <a href="https://github.com/MKaaNa/fullstack-bank-app" class="project-link" title="GitHub" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
                   </a>
                 </div>
@@ -1098,7 +1076,7 @@
               <div class="project-icon"><i class="fas fa-brain"></i></div>
               <div class="project-overlay">
                 <div class="project-links">
-                  <a href="https://github.com/MKaaNa" class="project-link" title="GitHub" target="_blank">
+                  <a href="https://github.com/MKaaNa" class="project-link" title="GitHub" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
                   </a>
                 </div>
@@ -1135,7 +1113,7 @@
               <div class="project-icon"><i class="fas fa-network-wired"></i></div>
               <div class="project-overlay">
                 <div class="project-links">
-                  <a href="https://github.com/MKaaNa" class="project-link" title="GitHub" target="_blank">
+                  <a href="https://github.com/MKaaNa" class="project-link" title="GitHub" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
                   </a>
                 </div>
@@ -1179,7 +1157,7 @@
         </div>
         
         <div class="more-projects">
-          <a href="https://github.com/MKaaNa" class="btn btn-outline" target="_blank">
+          <a href="https://github.com/MKaaNa" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-github"></i>
             <span data-lang="projects.moreProjects">Daha Fazla Proje</span>
           </a>
@@ -1207,6 +1185,10 @@
                   <span data-lang="contact.downloadCV">CV İndir</span>
                 </a>
               </div>
+              <p class="contact-response-note" data-lang="contact.responseNote">
+                <i class="fas fa-clock" aria-hidden="true"></i>
+                Genellikle 24 saat içinde yanıt veririm.
+              </p>
             </div>
             <div class="contact-methods">
               <div class="contact-method">
@@ -1215,16 +1197,7 @@
                 </div>
                 <div class="contact-details">
                   <span class="contact-label" data-lang="contact.methods.email">Email</span>
-                  <span class="contact-value">mkaanaltin@gmail.com</span>
-                </div>
-              </div>
-              <div class="contact-method">
-                <div class="contact-icon">
-                  <i class="fas fa-phone-alt"></i>
-                </div>
-                <div class="contact-details">
-                  <span class="contact-label" data-lang="contact.methods.phone">Telefon</span>
-                  <span class="contact-value">+90 541 826 3290</span>
+                  <a href="mailto:mkaanaltin@gmail.com" class="contact-value contact-link">mkaanaltin@gmail.com</a>
                 </div>
               </div>
               <div class="contact-method">
@@ -1242,7 +1215,7 @@
                 </div>
                 <div class="contact-details">
                   <span class="contact-label" data-lang="contact.methods.availability">Müsaitlik</span>
-                  <span class="contact-value" data-lang="contact.values.availability">Fırsatlara Açığım</span>
+                  <span class="contact-value" data-lang="contact.values.availability">Yeni Projeler & İşbirlikleri</span>
                 </div>
               </div>
             </div>
@@ -1285,14 +1258,14 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-text">
-          <p data-lang="footer.copyright">&copy; 2025 Musa Kaan Altın. Tüm hakları saklıdır.</p>
+          <p data-lang="footer.copyright">&copy; 2026 Musa Kaan Altın. Tüm hakları saklıdır.</p>
           <p style="font-size:0.8rem;color:var(--text-muted);margin-top:4px;font-family:var(--font-mono);">Built with HTML, CSS, JavaScript · Hosted on GitHub Pages</p>
         </div>
         <div class="footer-social">
-          <a href="https://github.com/MKaaNa" class="social-link" target="_blank">
+          <a href="https://github.com/MKaaNa" class="social-link" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://linkedin.com/in/mkaana/" class="social-link" target="_blank">
+          <a href="https://linkedin.com/in/mkaana/" class="social-link" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-linkedin-in"></i>
           </a>
           <a href="mailto:mkaanaltin@gmail.com" class="social-link">
@@ -1374,8 +1347,9 @@
     
     if (hamburger && navMenu) {
       hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
+        const isActive = hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
       });
 
       // Close mobile menu when clicking on a link - using event delegation
@@ -1383,6 +1357,7 @@
         if (e.target.closest('.nav-link')) {
           hamburger.classList.remove('active');
           navMenu.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
         }
       });
     }

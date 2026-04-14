@@ -1,11 +1,11 @@
 {
   "name": "Musa Kaan Altın - Software Developer Portfolio",
   "short_name": "MK Portfolio",
-  "description": "Junior Software Developer ve Backend Developer portfolyosu",
+  "description": "Java Backend Developer. Spring Boot, Microservices, JWT, REST API.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0d1117",
-  "theme_color": "#22c55e",
+  "theme_color": "#00e5ff",
   "orientation": "portrait-primary",
   "icons": [
     {
