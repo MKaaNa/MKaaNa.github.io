@@ -354,13 +354,14 @@ class PortfolioAnalytics {
           const hrefAttr = target.getAttribute ? target.getAttribute('href') : null;
           const href = target.href || '';
           const section = hrefAttr && hrefAttr.startsWith('#') ? hrefAttr.substring(1) : '';
-          const isCvDownload = typeof href === 'string' && href.includes('/assets/docs/CV_Musa_Kaan_Altin.pdf');
+          const isCvDownload = target.classList && target.classList.contains('cv-download-link');
 
           if (isCvDownload) {
+            const cvFile = (href || '').split('/').pop() || 'cv.pdf';
             this.currentSession.cvDownloads = (this.currentSession.cvDownloads || 0) + 1;
             this.analytics.cvDownloads = (this.analytics.cvDownloads || 0) + 1;
             portfolioGa4Event('cv_download', {
-              file: 'CV_Musa_Kaan_Altin.pdf'
+              file: cvFile
             });
           }
 

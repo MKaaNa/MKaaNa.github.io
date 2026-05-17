@@ -10,6 +10,11 @@ const languages = {
       projects: "Projeler",
       contact: "İletişim"
     },
+
+    cv: {
+      href: "assets/docs/CV_Musa_Kaan_Altin_TR.pdf",
+      download: "CV_Musa_Kaan_Altin_TR.pdf"
+    },
     
     // Header
     header: {
@@ -40,7 +45,7 @@ const languages = {
       title: "Hakkımda",
       subtitle: "",
       jobTitle: "Java Backend Developer",
-      intro1: "Merhaba, ben Kaan. OSTIM Teknik Üniversitesi Bilgisayar Mühendisliği mezunuyum (2021–2025). Java tabanlı kurumsal sistemlerde üretim ortamı deneyimine sahip bir Backend Geliştirici olarak çalışıyorum. Şu anda Başarı Mobile'da Spring Boot ve mikroservis mimarisiyle güvenli backend servisleri geliştiriyorum; aynı zamanda yeni fırsatlara açığım.",
+      intro1: "Merhaba, ben Kaan. Bilgisayar Mühendisliği mezunuyum. Java tabanlı kurumsal sistemlerde üretim ortamı deneyimine sahip bir Backend Geliştirici olarak çalışıyorum. Şu anda Başarı Mobile'da Spring Boot ve mikroservis mimarisiyle güvenli backend servisleri geliştiriyorum; aynı zamanda yeni fırsatlara açığım.",
       intro2: "Güvenli backend servisleri, veri tutarlılığı, JWT tabanlı kimlik doğrulama ve yetkilendirme ile işlemsel sistemler üzerine çalıştım. Ziraat Teknoloji, FDN Soft, STM, Karel, Mobiliz ve Crypttech gibi firmalarda staj ve tam zamanlı deneyim edindim. FinTech, savunma sanayi ve IoT alanlarında uygulamalı tecrübe kazandım.",
       intro3: "Analitik düşünen, veriye dayalı problem çözmeyi benimseyen ve ekip içinde iş birliğiyle çalışmaya uyum sağlayan bir yapıya sahibim. Mikroservis mimarileri, FinTech çözümleri ve ölçeklenebilir kritik iş uygulamalarında sorumluluk alarak gelişmeyi hedefliyorum.",
       
@@ -292,6 +297,11 @@ const languages = {
       projects: "Projects",
       contact: "Contact"
     },
+
+    cv: {
+      href: "assets/docs/CV_Musa_Kaan_Altin_EN.pdf",
+      download: "CV_Musa_Kaan_Altin_EN.pdf"
+    },
     
     // Header
     header: {
@@ -322,7 +332,7 @@ const languages = {
       title: "About Me",
       subtitle: "",
       jobTitle: "Java Backend Developer",
-      intro1: "Hello, I'm Kaan. I'm a Computer Engineering graduate from OSTIM Technical University (2021–2025). I'm a Backend Developer with production experience in Java-based enterprise systems. I currently work at Başarı Mobile developing secure backend services with Spring Boot and microservice architecture, and I'm open to new opportunities.",
+      intro1: "Hello, I'm Kaan. I'm a Computer Engineering graduate. I'm a Backend Developer with production experience in Java-based enterprise systems. I currently work at Başarı Mobile developing secure backend services with Spring Boot and microservice architecture, and I'm open to new opportunities.",
       intro2: "I've worked on secure backend services, data consistency, JWT-based authentication and authorization, and transactional systems. I've gained internship and full-time experience at companies like Ziraat Technology, FDN Soft, STM, Karel, Mobiliz and Crypttech. I have hands-on experience in FinTech, defense and IoT.",
       intro3: "I'm analytical, data-driven in problem solving and collaborative in teams. I aim to take on responsibility in microservice architectures, FinTech solutions and scalable critical business applications.",
       

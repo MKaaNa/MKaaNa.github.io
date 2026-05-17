@@ -250,7 +250,6 @@
       "PostgreSQL",
       "RESTful API"
     ],
-    "alumniOf": "OSTIM Teknik Üniversitesi - Bilgisayar Mühendisliği",
     "worksFor": {
       "@type": "Organization",
       "name": "Başarı Mobile"
@@ -361,7 +360,7 @@
               <i class="fas fa-envelope"></i>
               <span data-lang="hero.contactMe">Benimle İletişime Geç</span>
             </a>
-            <a href="assets/docs/CV_Musa_Kaan_Altin.pdf" class="btn btn-secondary" download="CV_Musa_Kaan_Altin.pdf">
+            <a href="assets/docs/CV_Musa_Kaan_Altin_TR.pdf" class="btn btn-secondary cv-download-link" download="CV_Musa_Kaan_Altin_TR.pdf">
               <i class="fas fa-download"></i>
               <span data-lang="hero.downloadCV">CV İndir</span>
             </a>
@@ -415,7 +414,7 @@
             <div class="about-intro">
               <h3 data-lang="about.jobTitle">Java Backend Developer</h3>
               <p data-lang="about.intro1">
-                Merhaba, ben Kaan. OSTIM Teknik Üniversitesi Bilgisayar Mühendisliği mezunuyum (2021–2025). Java tabanlı kurumsal sistemlerde üretim ortamı deneyimine sahip bir Backend Geliştirici olarak çalışıyorum. Şu anda Başarı Mobile'da Spring Boot ve mikroservis mimarisiyle güvenli backend servisleri geliştiriyorum; aynı zamanda yeni fırsatlara açığım.
+                Merhaba, ben Kaan. Bilgisayar Mühendisliği mezunuyum. Java tabanlı kurumsal sistemlerde üretim ortamı deneyimine sahip bir Backend Geliştirici olarak çalışıyorum. Şu anda Başarı Mobile'da Spring Boot ve mikroservis mimarisiyle güvenli backend servisleri geliştiriyorum; aynı zamanda yeni fırsatlara açığım.
               </p>
               <p data-lang="about.intro2">
                 Güvenli backend servisleri, veri tutarlılığı, JWT tabanlı kimlik doğrulama ve yetkilendirme ile işlemsel sistemler üzerine çalıştım. Ziraat Teknoloji, FDN Soft, STM, Karel, Mobiliz ve Crypttech gibi firmalarda staj ve tam zamanlı deneyim edindim. FinTech, savunma sanayi ve IoT alanlarında uygulamalı tecrübe kazandım.
@@ -1211,7 +1210,7 @@
                 benimle iletişime geçmekten çekinmeyin.
               </p>
               <div class="contact-actions">
-                <a href="assets/docs/CV_Musa_Kaan_Altin.pdf" class="btn btn-outline btn-small" download="CV_Musa_Kaan_Altin.pdf">
+                <a href="assets/docs/CV_Musa_Kaan_Altin_TR.pdf" class="btn btn-outline btn-small cv-download-link" download="CV_Musa_Kaan_Altin_TR.pdf">
                   <i class="fas fa-file-pdf"></i>
                   <span data-lang="contact.downloadCV">CV İndir</span>
                 </a>
@@ -1607,6 +1606,13 @@
           element.placeholder = value;
         }
       });
+
+      if (data.cv) {
+        document.querySelectorAll('.cv-download-link').forEach((link) => {
+          link.href = data.cv.href;
+          link.setAttribute('download', data.cv.download);
+        });
+      }
       
       // Update language buttons
       document.querySelectorAll('.lang-btn').forEach(btn => {
